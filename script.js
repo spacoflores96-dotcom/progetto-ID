@@ -1,19 +1,24 @@
 // Arreglo con las preguntas, opciones y la respuesta correcta
 const quizData = [
   {
-    question: "¿Qué lenguaje da interactividad a las páginas web?",
-    options: ["HTML", "CSS", "JavaScript", "SQL"],
-    correct: 2 // Índice de la respuesta correcta (JavaScript)
+    question: "¿Qual e il tuo stile preferito?",
+    options: ["MODERNO", "MINIMALISTA", "CLASSICO", "BOEMO"],
+    correct: 2 // Índice de la respuesta correcta (NESSUNO)
   },
   {
-    question: "¿Cuál de estos NO es un framework de JavaScript?",
-    options: ["React", "Laravel", "Vue", "Angular"],
-    correct: 1 // Laravel es de PHP
+    question: "¿Quali colori si adattano meglio il tuo stile?",
+    options: ["luminosa", "Colorata"],
+    correct: 1 // 
   },
   {
-    question: "¿Cómo se declara una variable que no cambia en JavaScript?",
-    options: ["var", "let", "const", "static"],
-    correct: 2
+    question: "scegli il mood che senti ti rappresenta di piu ",
+    options: ["accogliente", "Energico", "sereno", "Lussuoso"],
+    correct: 1 // 
+  },
+  {
+    question: "¿scegli una struttura?",
+    options: ["acciaio grezzo e cemento", "lino e vimini scoloriti dal sole", "velluto e stampa su stampa", "palla chiara e legno tenero"],
+    correct: 1
   }
 ];
 
@@ -51,10 +56,10 @@ function selectAnswer(selectedIndex) {
 
   if (selectedIndex === currentQuestion.correct) {
     score++;
-    resultElement.style.color = "green";
+    resultElement.style.color = "moderno";
     resultElement.innerText = "¡Correcto! 🎉";
   } else {
-    resultElement.style.color = "red";
+    resultElement.style.color = "boemio";
     resultElement.innerText = "Incorrecto ❌";
   }
 
