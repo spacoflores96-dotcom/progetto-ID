@@ -1,17 +1,17 @@
 // Disposizione delle domande, delle opzioni e della risposta corretta
 const quizData = [
   {
-    question 1: "¿Qual è il tuo stile preferito?",
+    question: "¿Qual è il tuo stile preferito?",
     options: ["MODERNO", "MINIMALISTA", "CLASSICO", "BOEMO"],
     correct: 1 // Indice delle risposte corrette (NESSUNO)
   },
   {
-    question 2: "scegli il mood che senti ti rappresenta di più ",
+    question: "scegli il mood che senti ti rappresenta di più ",
     options: ["accogliente", "Energico", "sereno", "Lussuoso"],
     correct: 1 // 
   },
   {
-    question 3: "¿Quali toni si adattano meglio il tuo spazio?",
+    question: "¿Quali toni si adattano meglio il tuo spazio?",
     options: ["luminosa", "Colorata"],
     correct: 1 // 
   }
