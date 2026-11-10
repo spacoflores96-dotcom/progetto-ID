@@ -1,24 +1,19 @@
-// Arreglo con las preguntas, opciones y la respuesta correcta
+// Disposizione delle domande, delle opzioni e della risposta corretta
 const quizData = [
   {
-    question: "¿Qual e il tuo stile preferito?",
+    question 1: "¿Qual è il tuo stile preferito?",
     options: ["MODERNO", "MINIMALISTA", "CLASSICO", "BOEMO"],
-    correct: 2 // Índice de la respuesta correcta (NESSUNO)
+    correct: 1 // Indice delle risposte corrette (NESSUNO)
   },
   {
-    question: "¿Quali colori si adattano meglio il tuo stile?",
-    options: ["luminosa", "Colorata"],
-    correct: 1 // 
-  },
-  {
-    question: "scegli il mood che senti ti rappresenta di piu ",
+    question 2: "scegli il mood che senti ti rappresenta di più ",
     options: ["accogliente", "Energico", "sereno", "Lussuoso"],
     correct: 1 // 
   },
   {
-    question: "¿scegli una struttura?",
-    options: ["acciaio grezzo e cemento", "lino e vimini scoloriti dal sole", "velluto e stampa su stampa", "palla chiara e legno tenero"],
-    correct: 1
+    question 3: "¿Quali toni si adattano meglio il tuo spazio?",
+    options: ["luminosa", "Colorata"],
+    correct: 1 // 
   }
 ];
 
@@ -29,7 +24,7 @@ const questionElement = document.getElementById("question");
 const optionsElement = document.getElementById("options");
 const resultElement = document.getElementById("result");
 
-// Función para mostrar la pregunta actual
+// Funzione per visualizzare la domanda corrente
 function showQuestion() {
   resetState();
   const currentQuestion = quizData[currentQuestionIndex];
@@ -44,13 +39,13 @@ function showQuestion() {
   });
 }
 
-// Limpiar opciones anteriores
+// Cancella le opzioni precedenti -  Limpiar opciones anteriores
 function resetState() {
   resultElement.innerText = "";
   optionsElement.innerHTML = "";
 }
 
-// Verificar la respuesta seleccionada
+// Verifica la risposta selezionata
 function selectAnswer(selectedIndex) {
   const currentQuestion = quizData[currentQuestionIndex];
 
@@ -74,9 +69,9 @@ function selectAnswer(selectedIndex) {
   }, 1000);
 }
 
-// Mostrar pantalla final
+// Mostra la schermata finale
 function showQuizEnd() {
-  questionElement.innerText = "¡Quiz terminado!";
+  questionElement.innerText = "¡Quiz finito!";
   optionsElement.innerHTML = "";
   resultElement.style.color = "#333";
   resultElement.innerText = `Tu puntuación es ${score} de ${quizData.length}.`;
