@@ -1,1 +1,55 @@
-
+<div style={{width: 1440, height: 1200, position: 'relative', background: '#F7F4EB', overflow: 'hidden'}}>
+  <div style={{width: 1440, height: 134, left: 0, top: 0, position: 'absolute'}}>
+    <div style={{width: 300, left: 64, top: 25, position: 'absolute', color: '#2C2E30', fontSize: 33, fontFamily: 'Cormorant Garamond', fontWeight: '500', lineHeight: 35.64, wordWrap: 'break-word'}}>Tonalia</div>
+    <div style={{width: 300, left: 65, top: 65, position: 'absolute', color: '#4A4743', fontSize: 16, fontFamily: 'DM Sans', fontWeight: '400', lineHeight: 24, wordWrap: 'break-word'}}>Interior design a modo tuo</div>
+    <div style={{width: 1312, height: 1, left: 64, top: 121, position: 'absolute', background: '#DED8C9'}} />
+    <div style={{width: 400, left: 520, top: 23, position: 'absolute', textAlign: 'center', color: '#C86D51', fontSize: 13, fontFamily: 'DM Sans', fontWeight: '600', textTransform: 'uppercase', lineHeight: 18.20, letterSpacing: 1.04, wordWrap: 'break-word'}}>STEP 1 DI 3</div>
+    <div style={{width: 108, height: 3, left: 548, top: 50, position: 'absolute', background: '#C86D51'}} />
+    <div style={{width: 108, height: 3, left: 666, top: 50, position: 'absolute', background: '#DED8C9'}} />
+    <div style={{width: 108, height: 3, left: 784, top: 50, position: 'absolute', background: '#DED8C9'}} />
+    <div style={{width: 400, left: 520, top: 67, position: 'absolute', textAlign: 'center', color: '#4A4743', fontSize: 16, fontFamily: 'DM Sans', fontWeight: '400', lineHeight: 24, wordWrap: 'break-word'}}>01  Stile</div>
+    <div style={{width: 190, left: 1186, top: 44, position: 'absolute', textAlign: 'right', color: '#2C2E30', fontSize: 16, fontFamily: 'DM Sans', fontWeight: '500', lineHeight: 24, letterSpacing: 0.32, wordWrap: 'break-word'}}>Esci dal quiz  ×</div>
+  </div>
+  <div style={{width: 1440, height: 212, left: 0, top: 138, position: 'absolute'}}>
+    <div style={{width: 1200, left: 120, top: 30, position: 'absolute', textAlign: 'center', color: '#C86D51', fontSize: 13, fontFamily: 'DM Sans', fontWeight: '600', textTransform: 'uppercase', lineHeight: 18.20, letterSpacing: 1.04, wordWrap: 'break-word'}}>01 / SCEGLI LO STILE</div>
+    <div style={{width: 1120, left: 160, top: 63, position: 'absolute', textAlign: 'center', color: '#2C2E30', fontSize: 48, fontFamily: 'Cormorant Garamond', fontWeight: '500', lineHeight: 57.60, wordWrap: 'break-word'}}>Qual è il tuo stile preferito?</div>
+    <div style={{width: 560, left: 440, top: 139, position: 'absolute', textAlign: 'center', color: '#4A4743', fontSize: 16, fontFamily: 'DM Sans', fontWeight: '400', lineHeight: 24, wordWrap: 'break-word'}}>Lasciati guidare dalle forme. Scegli l’interno che senti più tuo.</div>
+  </div>
+  <div style={{width: 1440, height: 636, left: 0, top: 346, position: 'absolute'}}>
+    <div style={{width: 520, height: 294, left: 184, top: 12, position: 'absolute', background: '#FFFCF5', overflow: 'hidden', borderRadius: 3, outline: '2px #C86D51 solid', outlineOffset: '-2px'}}>
+      <img style={{width: 504, height: 210, left: 8, top: 8, position: 'absolute'}} src="https://placehold.co/504x210" />
+      <div style={{width: 400, left: 20, top: 226, position: 'absolute', color: '#2C2E30', fontSize: 22, fontFamily: 'Cormorant Garamond', fontWeight: '500', lineHeight: 29.70, wordWrap: 'break-word'}}>Moderno</div>
+      <div style={{width: 440, left: 20, top: 265, position: 'absolute', color: '#4A4743', fontSize: 16, fontFamily: 'DM Sans', fontWeight: '400', lineHeight: 24, wordWrap: 'break-word'}}>Linee pulite, carattere contemporaneo.</div>
+      <div style={{width: 24, height: 24, left: 473, top: 239, position: 'absolute', background: 'white', borderRadius: 9999, border: '2px #C86D51 solid'}} />
+      <div style={{width: 18, left: 477, top: 238, position: 'absolute', color: '#2C2E30', fontSize: 18, fontFamily: 'DM Sans', fontWeight: '500', lineHeight: 21, wordWrap: 'break-word'}}>✓</div>
+    </div>
+    <div style={{width: 520, height: 294, left: 736, top: 12, position: 'absolute', background: '#FFFCF5', overflow: 'hidden', borderRadius: 3, outline: '1px #DED8C9 solid', outlineOffset: '-1px'}}>
+      <img style={{width: 504, height: 210, left: 8, top: 8, position: 'absolute'}} src="https://placehold.co/504x210" />
+      <div style={{width: 400, left: 20, top: 226, position: 'absolute', color: '#2C2E30', fontSize: 22, fontFamily: 'Cormorant Garamond', fontWeight: '500', lineHeight: 29.70, wordWrap: 'break-word'}}>Minimalista</div>
+      <div style={{width: 440, left: 20, top: 265, position: 'absolute', color: '#4A4743', fontSize: 16, fontFamily: 'DM Sans', fontWeight: '400', lineHeight: 24, wordWrap: 'break-word'}}>L’essenziale, con naturalezza.</div>
+      <div style={{width: 24, height: 24, left: 473, top: 239, position: 'absolute', borderRadius: 9999, border: '1px #ABAFA9 solid'}} />
+    </div>
+    <div style={{width: 520, height: 294, left: 184, top: 330, position: 'absolute', background: '#FFFCF5', overflow: 'hidden', borderRadius: 3, outline: '1px #DED8C9 solid', outlineOffset: '-1px'}}>
+      <img style={{width: 504, height: 210, left: 8, top: 8, position: 'absolute'}} src="https://placehold.co/504x210" />
+      <div style={{width: 400, left: 20, top: 226, position: 'absolute', color: '#2C2E30', fontSize: 22, fontFamily: 'Cormorant Garamond', fontWeight: '500', lineHeight: 29.70, wordWrap: 'break-word'}}>Classico</div>
+      <div style={{width: 440, left: 20, top: 265, position: 'absolute', color: '#4A4743', fontSize: 16, fontFamily: 'DM Sans', fontWeight: '400', lineHeight: 24, wordWrap: 'break-word'}}>Un’eleganza senza tempo.</div>
+      <div style={{width: 24, height: 24, left: 473, top: 239, position: 'absolute', borderRadius: 9999, border: '1px #ABAFA9 solid'}} />
+    </div>
+    <div style={{width: 520, height: 294, left: 736, top: 330, position: 'absolute', background: '#FFFCF5', overflow: 'hidden', borderRadius: 3, outline: '1px #DED8C9 solid', outlineOffset: '-1px'}}>
+      <img style={{width: 504, height: 210, left: 8, top: 8, position: 'absolute'}} src="https://placehold.co/504x210" />
+      <div style={{width: 400, left: 20, top: 226, position: 'absolute', color: '#2C2E30', fontSize: 22, fontFamily: 'Cormorant Garamond', fontWeight: '500', lineHeight: 29.70, wordWrap: 'break-word'}}>Boemo</div>
+      <div style={{width: 440, left: 20, top: 265, position: 'absolute', color: '#4A4743', fontSize: 16, fontFamily: 'DM Sans', fontWeight: '400', lineHeight: 24, wordWrap: 'break-word'}}>Texture, calore e libertà.</div>
+      <div style={{width: 24, height: 24, left: 473, top: 239, position: 'absolute', borderRadius: 9999, border: '1px #ABAFA9 solid'}} />
+    </div>
+  </div>
+  <div style={{width: 1440, height: 150, left: 0, top: 1028, position: 'absolute'}}>
+    <div style={{width: 250, left: 184, top: 23, position: 'absolute', color: '#4A4743', fontSize: 16, fontFamily: 'DM Sans', fontWeight: '400', lineHeight: 24, wordWrap: 'break-word'}}>←  Torna alla home</div>
+    <div style={{width: 350, left: 520, top: 29, position: 'absolute', textAlign: 'center', color: '#4A4743', fontSize: 16, fontFamily: 'DM Sans', fontWeight: '400', lineHeight: 24, wordWrap: 'break-word'}}>La tua scelta: Moderno</div>
+    <div style={{width: 236, height: 56, left: 1020, top: 5, position: 'absolute', background: '#C86D51', overflow: 'hidden', borderRadius: 2}}>
+      <div style={{width: 205, left: 15, top: 16, position: 'absolute', textAlign: 'center', color: 'white', fontSize: 16, fontFamily: 'DM Sans', fontWeight: '500', lineHeight: 24, letterSpacing: 0.32, wordWrap: 'break-word'}}>CONTINUA    →</div>
+    </div>
+    <div style={{width: 1072, height: 1, left: 184, top: 103, position: 'absolute', background: '#DED8C9'}} />
+    <div style={{width: 400, left: 184, top: 127, position: 'absolute', color: '#6B685F', fontSize: 16, fontFamily: 'DM Sans', fontWeight: '400', lineHeight: 24, wordWrap: 'break-word'}}>Tonalia</div>
+    <div style={{width: 376, left: 880, top: 120, position: 'absolute', textAlign: 'right', color: '#4A4743', fontSize: 16, fontFamily: 'DM Sans', fontWeight: '400', lineHeight: 24, wordWrap: 'break-word'}}>Il tuo stile. Nessuna risposta sbagliata.</div>
+  </div>
+</div>
