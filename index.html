@@ -3,55 +3,37 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Generatore di Moodboard</title>
+  <title>Quiz Moodboard Interior Design</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <main class="container">
-    <h2>Crea il tuo Moodboard</h2>
-
-    <!-- 1. STILE -->
-    <section class="step">
-      <span class="step-title">1. Stile Preferito</span>
-      <div class="options" id="group-stile">
-        <button class="btn-option active" data-val="MOD">Moderno</button>
-        <button class="btn-option" data-val="MIN">Minimalista</button>
-        <button class="btn-option" data-val="CLA">Classico</button>
-        <button class="btn-option" data-val="BOE">Boemo</button>
+  <div id="quiz-container" class="fade-in">
+    <div class="progress-wrapper">
+      <div class="progress-info">
+        <span id="step-text">Domanda 1 di 3</span>
       </div>
-    </section>
-
-    <!-- 2. STATO D'ANIMO -->
-    <section class="step">
-      <span class="step-title">2. Stato d'Animo</span>
-      <div class="options" id="group-mood">
-        <button class="btn-option active" data-val="ACC">Accogliente</button>
-        <button class="btn-option" data-val="SER">Sereno</button>
-        <button class="btn-option" data-val="ENE">Energico</button>
-        <button class="btn-option" data-val="LUS">Lussuoso</button>
+      <div class="progress-bar-bg">
+        <div id="progress-fill"></div>
       </div>
-    </section>
+    </div>
 
-    <!-- 3. PALETTE COLORI -->
-    <section class="step">
-      <span class="step-title">3. Palette Colori</span>
-      <div class="options" id="group-palette">
-        <button class="btn-option active" data-val="LUM">Luminosa (A)</button>
-        <button class="btn-option" data-val="COL">Colorata (B)</button>
-      </div>
-    </section>
+    <div id="question-box">
+      <h2 id="question"></h2>
+      <div id="options"></div>
+    </div>
+  </div>
 
-    <!-- RESULTADO -->
-    <section class="result-card" id="result-card">
-      <span class="badge" id="moodboard-type">Moodboard A</span>
-      <div class="code-display" id="code-output">MOD-ACC-LUM</div>
-      <p id="desc-output">Moderno • Accogliente • Luminosa</p>
-      <div class="palette-grid" id="palette-grid"></div>
-      <small class="copy-hint" id="copy-hint">Clicca su un colore per copiare il codice HEX</small>
-    </section>
-  </main>
+  <div id="result-card" class="fade-in" style="display: none;">
+    <span id="code-output"></span>
+    <h3 id="moodboard-type"></h3>
+    <p id="desc-output"></p>
+    <div id="palette-grid"></div>
+    <small id="copy-hint">Clicca su un colore per copiare il codice HEX</small>
+    <button onclick="restartQuiz()">Ricomincia il quiz</button>
+  </div>
 
   <script src="script.js"></script>
 </body>
 </html>
+
