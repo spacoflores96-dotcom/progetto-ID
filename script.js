@@ -153,3 +153,4 @@ function restartQuiz() {
 // Avvio iniziale
 showQuestion();
 
+
