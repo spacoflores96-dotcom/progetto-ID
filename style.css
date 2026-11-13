@@ -184,6 +184,7 @@ body {
   #palette-grid {
     grid-template-columns: repeat(4, 1fr);
   }
+  /
   .altra-sezione {
   font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
   background-color: #f4f3ef;
