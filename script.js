@@ -1,5 +1,4 @@
 // Disposizione delle domande, delle opzioni e della risposta
-
 const quizData = [
   {
     question: "Qual è il tuo stile preferito?",
@@ -150,7 +149,5 @@ function restartQuiz() {
   showQuestion();
 }
 
-// Avvio iniziale
+// Avvia il quiz al caricamento della pagina
 showQuestion();
-
-
