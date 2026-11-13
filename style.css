@@ -184,5 +184,15 @@ body {
   #palette-grid {
     grid-template-columns: repeat(4, 1fr);
   }
+  .altra-sezione {
+  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  background-color: #f4f3ef;
+  color: #2c2c2c;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 20px;
+}
 }
 
