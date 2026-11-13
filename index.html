@@ -1,12 +1,57 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="it">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Quiz TONALIA interior design </title>
-  </head>
-  <body>
-    <p> Hola </p>
-   <h1>  Quiz TONALIA interior design </h1> 
-  </body>   
+  <title>Generatore di Moodboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <main class="container">
+    <h2>Crea il tuo Moodboard</h2>
+
+    <!-- 1. STILE -->
+    <section class="step">
+      <span class="step-title">1. Stile Preferito</span>
+      <div class="options" id="group-stile">
+        <button class="btn-option active" data-val="MOD">Moderno</button>
+        <button class="btn-option" data-val="MIN">Minimalista</button>
+        <button class="btn-option" data-val="CLA">Classico</button>
+        <button class="btn-option" data-val="BOE">Boemo</button>
+      </div>
+    </section>
+
+    <!-- 2. STATO D'ANIMO -->
+    <section class="step">
+      <span class="step-title">2. Stato d'Animo</span>
+      <div class="options" id="group-mood">
+        <button class="btn-option active" data-val="ACC">Accogliente</button>
+        <button class="btn-option" data-val="SER">Sereno</button>
+        <button class="btn-option" data-val="ENE">Energico</button>
+        <button class="btn-option" data-val="LUS">Lussuoso</button>
+      </div>
+    </section>
+
+    <!-- 3. PALETTE COLORI -->
+    <section class="step">
+      <span class="step-title">3. Palette Colori</span>
+      <div class="options" id="group-palette">
+        <button class="btn-option active" data-val="LUM">Luminosa (A)</button>
+        <button class="btn-option" data-val="COL">Colorata (B)</button>
+      </div>
+    </section>
+
+    <!-- RESULTADO -->
+    <section class="result-card" id="result-card">
+      <span class="badge" id="moodboard-type">Moodboard A</span>
+      <div class="code-display" id="code-output">MOD-ACC-LUM</div>
+      <p id="desc-output">Moderno • Accogliente • Luminosa</p>
+      <div class="palette-grid" id="palette-grid"></div>
+      <small class="copy-hint" id="copy-hint">Clicca su un colore per copiare il codice HEX</small>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
 </html>
