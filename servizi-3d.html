@@ -32,31 +32,96 @@
          <img src="pictures/servizi1.png" alt="Render 3D soggiorno moderno">
       </div>
       </section>
-         <form>
-       <div>
-         <label for="user_first_name">First name</label><br>
-         <input type="text" id="user_first_name" name="user_first_name">
+
+      <section class="steps-section">
+         <p class="eyebrow"> IL TUO PROGETTO, PASSO DOPO PASSO </p>
+         <h2>Come funziona il servizio</h2>
+         <div class="steps-grid">
+            <div class="steps-card">
+               <span class="step-number">01</span>
+               <h3>Raccontaci il tuo spazio</h3>
+               <p>Invia la planimetria e le foto della tua stanza attuale</p>
+            </div>
+         <div class="step card">
+            <span class="step number">02</span>
+            <h3>Ripartiamo dalla tua moodboard</h3>
+            <p>Indica la moodboard Tonalia ottenuta dal test (con i tuoi codici NCS e materiali)</p>
+         </div>  
+         <div class="step card">
+            <span class="step-number">03</span>
+          <h3>Guarda la tua casa prendere forma</h3>
+          <p>Ricevi il Render 3D fotorealistico e la lista acquisti pronta per lo showroom.</p>
+        </div>
+      </div>
+    </section>
+      <section class="before-after-section">
+         <p class="eyebrow">DAL POTENZIALE ALLA REALTÀ</p>
+         <div class="section-header-inline">
+            <h2>Prima e Dopo</h2>
+            <p class="small-note">Stessa stanza. Una nuova idea di casa.</p>
+         </div>
+         <div class="comparison-grid">
+            <div class="comparison-item">
+               <h4>Prima</h4>
+          <img src="pictures/prima.png" alt="Stanza vuota prima del render">
+          <p class="caption">Il punto di partenza: uno spazio tutto da immaginare.</p>
+        </div>
+      <div class="comparison-item">
+         <h4>Dopo il render 3D Tonalia</h4>
+            <img src="pictures/dopo.png" alt="Stanza arredata dopo il render 3D">
+         <p class="caption">Colori NCS, materiali e arredi della tua moodboard.</p>
+         <div class="color-tags">
+            <span><i class="dot salvia"></i>Salvia NCS 3010-G20Y</span>
+            <span><i class="dot terracota"></i>Terracota NCS S 3040-Y80R</span>
+         </div>
+      </div>
+         </div>
+      </section>
+      
+       <section id="form-richiesta" class="form-box">
+       <div class="form-intro">
+          <p class="eyebrow">DALL'ISPIRAZIONE ALLA REALTÀ</p>
+          <h2>Ora, immaginala a casa tua.</h2>
+        <p>Diamo forma alla tua moodboard con un render 3D personalizzato e una lista della spesa pensata per il tuo spazio.</p>
+        <p class="form-cta-note">Raccontaci la tua idea.<br>Iniziamo a progettarla insieme.</p>
+      </div>
+          <form class="render form">
+             <div class="form row">
+                <div class="form group">
+         <label for="user_first_name">Nome</label>
+         <input type="text" id="user_name" name="user_name" placeholder="Il tuo nome" required>
        </div>
-       <div>
-         <label for="user_last_name">Last name</label><br>
-         <input type="text" id="user_last_name" name="user_last_name">
+       <div class="form-gropup">
+         <label for="user_email">Email</label>
+         <input type="email" id="user_email" name="user_email" placeholder="nome@email.it" required>
        </div>
-       <div>
-         <label for="user_email">Email</label><br>
-         <input type="email" id="user_email" name="user_email">
-       </div>
-       <div>
-         <label for="message">Message</label><br>
-         <input type="text" id="message" name="message">
-       </div>
-       <div>
-         <button type="submit">RICHIEDI IL TUO RENDER 3D </button>
-       </div>  
+             </div>
+       <div class="form group">
+         <label for="message">Messagio</label>
+         <textarea id="message" name="message" rows="4" placeholder="parlaci della stanza, dei tuoi desideri o del tuo progetto..."></textarea>
+          </div>
+         <button type="submit">RICHIEDI IL TUO RENDER 3D </button>  
       </form>
+       </section>
    </main>
    <footer>
-         <!--add copyright notices here-->
+     <footer class="site-footer">
+    <div class="footer-content">
+      <div class="footer-brand">
+        <h3>Tonalia</h3>
+        <p>Interior design a modo tuo</p>
+        <p class="footer-tagline">La casa che immagini. Lo spazio che sei.</p>
+      </div>
+      <div class="footer-links">
+        <p class="footer-title">ESPLORA TONALIA</p>
+        <a href="index.html">Home / Configuratore</a>
+        <a href="servizi-3d.html">Servizi & Render 3D</a>
+      </div>
+      <div class="footer-contact">
+        <p>ciao@tonalia.it</p>
+        <p>Instagram</p>
+      </div>
+    </div>   
    </footer>
-   <script src=""></script>
-</body>
+   </body>
 </html>
