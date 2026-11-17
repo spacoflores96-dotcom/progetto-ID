@@ -1,1 +1,147 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chi siamo - Tonalia</title>
+  /
+ 
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  / HEADER / NAVEGACIÓN 
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <a href="index.html" class="brand-logo">Tonalia</a>
+        <span class="brand-tagline">Interior design a modo tuo</span>
+      </div>
+      <nav class="main-nav">
+        <a href="#">Il Configuratore</a>
+        <a href="#">Esplora gli Stili</a>
+        <a href="#">Servizi 3D</a>
+        <a href="#">Design Journal</a>
+        <a href="chi-siamo.html" class="active">Chi Siamo</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    / SECCIÓN HERO 
+    <section class="hero-section">
+      <div class="container text-center">
+        <h1 class="hero-title">Tonalia: Interior design a modo tuo</h1>
+        <p class="hero-subtitle">
+          Uniamo la psicologia del colore e la precisione tecnica dei codici NCS per rendere l’armonia abitativa accessibile a tutti, senza stress e senza errori di valutazione.
+        </p>
+        <div class="hero-image-wrapper">
+          <img src="https://placehold.co/1280x480" alt="Interni arredati con palette Tonalia">
+        </div>
+      </div>
+    </section>
+
+    /SECCIÓN MISSION & VISION 
+    <section class="mission-vision-section">
+      <div class="container border-top">
+        <div class="grid-2-cols">
+          <!-- Columna 1: Mission -->
+          <div class="mv-card">
+            <span class="eyebrow">01 / PERCHÉ LO FACCIAMO</span>
+            <h2 class="section-title">La nostra Mission</h2>
+            <p class="body-text">
+              Guidare le persone a scoprire la propria identità stilistica attraverso la psicologia del colore, trasformando l’indecisione in progetti concreti in soli 3 click grazie a codici NCS esatti, palette HEX/RGB e abbinamenti materici.
+            </p>
+          </div>
+
+          <!-- Columna 2: Vision -->
+          <div class="mv-card">
+            <span class="eyebrow">02 / DOVE VOGLIAMO ARRIVARE</span>
+            <h2 class="section-title">La nostra Vision</h2>
+            <p class="body-text">
+              Diventare il punto di riferimento digitale che unisce chi desidera rinnovare casa con i migliori professionisti, colorifici e showroom del settore (B2B).
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    / SECCIÓN NÚMEROS 
+    <section class="numbers-section">
+      <div class="container border-top">
+        <h2 class="section-title">Tonalia in Numeri</h2>
+        <div class="grid-3-cols">
+          <div class="stat-item">
+            <span class="stat-number">+15.000</span>
+            <p class="body-text">Spazi trasformati e moodboard generate dagli utenti</p>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number">+120</span>
+            <p class="body-text">Showroom, colorifici e studi partner in tutta Italia</p>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number">98%</span>
+            <p class="body-text">Clienti soddisfatti che hanno scelto i colori al primo colpo senza errori</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    / SECCIÓN B2B Y FORMULARIO DE COLABORACIÓN (Completada) 
+    <section class="b2b-section">
+      <div class="container border-top">
+        <div class="grid-2-cols b2b-layout">
+          <!-- Info B2B -->
+          <div class="b2b-info">
+            <span class="eyebrow">UN PONTE TRA PERSONE E PROFESSIONISTI</span>
+            <h2 class="section-title">Per le Aziende:<br>Collabora o Integra il Tool</h2>
+            <p class="body-text">
+              Porta il configuratore Tonalia sul sito del tuo negozio: i clienti scoprono stile, palette e materiali prima ancora di entrare in showroom, arrivando già pronti all'acquisto.
+            </p>
+          </div>
+
+          /Formulario de contacto B2B 
+          <div class="b2b-form-wrapper">
+            <form action="#" method="POST" class="collab-form">
+              <div class="form-group">
+                <label for="azienda">Nome Azienda / Studio *</label>
+                <input type="text" id="azienda" name="azienda" placeholder="Es. Colorificio Rossi" required>
+              </div>
+              
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="nome">Nome e Cognome *</label>
+                  <input type="text" id="nome" name="nome" placeholder="Mario Rossi" required>
+                </div>
+                <div class="form-group">
+                  <label for="email">Email aziendale *</label>
+                  <input type="email" id="email" name="email" placeholder="info@azienda.it" required>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="tipologia">Tipologia di collaborazione</label>
+                <select id="tipologia" name="tipologia">
+                  <option value="integrazione">Integrazione Configuratore sul sito</option>
+                  <option value="showroom">Partnership Showroom / Colorificio</option>
+                  <option value="professionista">Architetto / Interior Designer</option>
+                  <option value="altro">Altro</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="messaggio">Messaggio</label>
+                <textarea id="messaggio" name="messaggio" rows="4" placeholder="Raccontaci brevemente la tua realtà..."></textarea>
+              </div>
+
+              <button type="submit" class="btn-primary">Richiedi informazioni</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+</body>
+</html>
 
