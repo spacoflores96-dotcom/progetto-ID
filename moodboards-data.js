@@ -62,6 +62,8 @@ const questionElement = document.getElementById("question");
 const optionsElement = document.getElementById("options");
 const quizContainer = document.getElementById("quiz-container");
 const resultCard = document.getElementById("result-card");
+const stepText = document.getElementById("step-text");
+const progressFill = document.getElementById("progress-fill");
 
 function getContrastYIQ(hexcolor) {
   const cleanHex = hexcolor.replace("#", "");
@@ -76,6 +78,11 @@ function showQuestion() {
   optionsElement.innerHTML = "";
   const currentQuestion = quizData[currentQuestionIndex];
   questionElement.innerText = `${currentQuestionIndex + 1}. ${currentQuestion.question}`;
+
+  // Aggiorna testo e barra di avanzamento
+  stepText.innerText = `Domanda ${currentQuestionIndex + 1} di ${quizData.length}`;
+  const progressPercent = ((currentQuestionIndex + 1) / quizData.length) * 100;
+  progressFill.style.width = `${progressPercent}%`;
 
   currentQuestion.options.forEach((option, index) => {
     const button = document.createElement("button");
@@ -141,6 +148,7 @@ function actualizarMoodboard(codigo) {
   });
 }
 
+// Funzione per ricominciare il quiz
 function restartQuiz() {
   currentQuestionIndex = 0;
   userChoices = [];
@@ -151,3 +159,4 @@ function restartQuiz() {
 
 // Avvia il quiz al caricamento della pagina
 showQuestion();
+
