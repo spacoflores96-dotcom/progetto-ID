@@ -55,16 +55,27 @@ body {
 }
 
 .main-nav a {
+  position: relative;
   text-decoration: none;
-  color: #5C5952;
+  color: #262522;
   font-size: 0.9rem;
-  font-weight: 500;
-  transition: color 0.2s ease;
+  font-weight: 400;
+  padding-bottom: 6px;
+  border-bottom: 2px solid transparent;
+  transition: border-color 0.2s ease;
 }
 
-.main-nav a:hover,
 .main-nav a.active {
-  color: #C87D4B;
+  color: #262522;
+  border-bottom: 2px solid #C87D4B;
+}
+
+.main-nav a:hover {
+  border-bottom: 2px solid #D5CFC2;
+}
+
+.main-nav a.active:hover {
+  border-bottom: 2px solid #C87D4B;
 }
 
 /* Contenedor Principal Quiz */
@@ -302,3 +313,4 @@ body {
     grid-template-columns: repeat(2, 1fr);
   }
 }
+
