@@ -1,18 +1,32 @@
-// Disposizione delle domande, delle opzioni e della risposta
+// Disposizione delle domande, delle opzioni con immagini e della risposta
 const quizData = [
+  const quizData = [
   {
     question: "Qual è il tuo stile preferito?",
-    options: ["MODERNO", "MINIMALISTA", "CLASSICO", "BOEMO"],
+    options: [
+      { title: "Moderno", desc: "Linee pulite, carattere contemporaneo.", img: "pictures/moderno.jpg" },
+      { title: "Minimalista", desc: "L'essenziale, con naturalezza.", img: "pictures/minimalista.jpg" },
+      { title: "Classico", desc: "Un'eleganza senza tempo.", img: "pictures/classico.jpg" },
+      { title: "Boemo", desc: "Texture, calore e libertà.", img: "pictures/boemo.jpg" }
+    ],
     keys: ["MOD", "MIN", "CLA", "BOE"]
   },
   {
     question: "Scegli il mood che senti ti rappresenta di più",
-    options: ["Accogliente", "Energico", "Sereno", "Lussuoso"],
+    options: [
+      { title: "Accogliente", desc: "Calore, morbidezza e comfort.", img: "pictures/accogliente.jpg" },
+      { title: "Energico", desc: "Contrasti decisi e vitalità.", img: "pictures/energico.jpg" },
+      { title: "Sereno", desc: "Equilibrio, luce e tranquillità.", img: "pictures/sereno.jpg" },
+      { title: "Lussuoso", desc: "Dettagli sofisticati e materiali pregiati.", img: "pictures/lussuoso.jpg" }
+    ],
     keys: ["ACC", "ENE", "SER", "LUS"]
   },
   {
     question: "Quali toni si adattano meglio al tuo spazio?",
-    options: ["Luminosa", "Colorata"],
+    options: [
+      { title: "Luminosa", desc: "Tonalità neutre, chiare e ariose.", img: "pictures/luminosa.jpg" },
+      { title: "Colorata", desc: "Accenti vibranti e personalità.", img: "pictures/colorata.jpg" }
+    ],
     keys: ["LUM", "COL"]
   }
 ];
@@ -77,7 +91,7 @@ function getContrastYIQ(hexcolor) {
 function showQuestion() {
   optionsElement.innerHTML = "";
   const currentQuestion = quizData[currentQuestionIndex];
-  questionElement.innerText = `${currentQuestionIndex + 1}. ${currentQuestion.question}`;
+  questionElement.innerText = currentQuestion.question;
 
   // Aggiorna testo e barra di avanzamento
   stepText.innerText = `Domanda ${currentQuestionIndex + 1} di ${quizData.length}`;
@@ -86,8 +100,22 @@ function showQuestion() {
 
   currentQuestion.options.forEach((option, index) => {
     const button = document.createElement("button");
-    button.innerText = option;
+    button.type = "button";
     button.classList.add("option-btn");
+
+    button.innerHTML = `
+      <div class="option-img-wrapper">
+        <img src="${option.img}" alt="${option.title}">
+      </div>
+      <div class="option-info">
+        <div class="option-text">
+          <span class="option-title">${option.title}</span>
+          <span class="option-desc">${option.desc}</span>
+        </div>
+        <span class="option-radio"></span>
+      </div>
+    `;
+
     button.addEventListener("click", () => selectAnswer(index));
     optionsElement.appendChild(button);
   });
@@ -152,11 +180,3 @@ function actualizarMoodboard(codigo) {
 function restartQuiz() {
   currentQuestionIndex = 0;
   userChoices = [];
-  resultCard.style.display = "none";
-  quizContainer.style.display = "block";
-  showQuestion();
-}
-
-// Avvia il quiz al caricamento della pagina
-showQuestion();
-
