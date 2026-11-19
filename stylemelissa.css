@@ -238,7 +238,7 @@ h1, h2, h3, .logo, .footer-brand h3 {
   }
 }
 .hero-image-bg {
-  background-image: url('pictures/heroimage.jpg'); 
+  background-image: url('pictures/heroimage.png'); 
   background-size: cover;
   background-position: center;
   min-height: 550px;
@@ -381,7 +381,8 @@ h1, h2, h3, .logo, .footer-brand h3 {
 }
 
 .logo img {
-  height: 40px; 
-  width: auto;  
+  height: 75px; 
+  width: auto;
   display: block;
+  mix-blend-mode: multiply; 
 }
