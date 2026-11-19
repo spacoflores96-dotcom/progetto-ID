@@ -41,29 +41,84 @@
     <!-- TARJETA DE RESULTADO -->
     <div id="result-card" class="fade-in" style="display: none;">
       <div class="result-header">
-      <span id="code-output"></span>
-      <h3 id="moodboard-type"></h3>
-      <p id="desc-output"></p>
+        <span id="code-output"></span>
+        <h3 id="moodboard-type"></h3>
+        <p id="desc-output"></p>
       </div>
 
       <div class="result-body">
-       <div class="result-left">
-      <p class="eyebrow">LA TUA PALETTE</p>
-      <h3>Colori che fanno casa.</h3> 
-      <div id="palette-grid"></div>
-      <small id="copy-hint">Clicca su un colore per copiare il codice HEX</small>  
-       <button type="button" onclick="restartQuiz()">Ricomincia il quiz</button>
-    </div>
+        <div class="result-left">
+          <p class="eyebrow">LA TUA PALETTE</p>
+          <h3>Colori che fanno casa.</h3>
+          <div id="palette-grid"></div>
+          <small id="copy-hint">Clicca su un colore per copiare il codice HEX</small>
+          <button type="button" onclick="restartQuiz()">Ricomincia il quiz</button>
+        </div>
+
         <div class="result-right">
-      <p class="eyebrow">IL TUO SPAZIO, IN ANTEPRIMA</p>
+          <p class="eyebrow">IL TUO SPAZIO, IN ANTEPRIMA</p>
           <img id="moodboard-img" src="" alt="Anteprima Moodboard">
         </div>
       </div>
-    </div>
-</main>
 
-<script src="moodboards-data.js"></script>
+      <!-- FORM RICHIESTA RENDER 3D -->
+      <div class="form-box" style="margin-top: 64px;">
+        <div class="form-intro">
+          <span class="eyebrow">DALL'ISPIRAZIONE ALLA REALTÀ</span>
+          <h2>Ora, immaginala a casa tua.</h2>
+          <p>Diamo forma alla tua moodboard con un render 3D personalizzato e una lista della spesa pensata per il tuo spazio.</p>
+          <p>Raccontaci la tua idea.<br>Iniziamo a progettarla insieme.</p>
+        </div>
+
+        <form class="collab-form" action="#" method="post">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="nome">Nome</label>
+              <input type="text" id="nome" name="nome" placeholder="Il tuo nome" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="nome@email.it" required>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="messaggio">Messaggio</label>
+            <textarea id="messaggio" name="messaggio" rows="4" placeholder="Parlaci della stanza, dei tuoi desideri e del tuo progetto.." required></textarea>
+          </div>
+
+          <label class="form-checkbox">
+            <input type="checkbox" name="privacy" required>
+            <span>Ho letto la Privacy Policy e acconsento al trattamento dei miei dati per essere ricontattato.</span>
+          </label>
+
+          <button type="submit" class="btn-submit">RICHIEDI IL TUO RENDER 3D + Lista della Spesa</button>
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-content">
+      <div class="footer-brand">
+        <h3>Tonalia</h3>
+        <p>Interior design a modo tuo.</p>
+      </div>
+      <div class="footer-links">
+        <a href="configuratore.html">Il Configuratore</a>
+        <a href="esplora-stili.html">Esplora gli Stili</a>
+        <a href="servizi-3d.html">Servizi 3D</a>
+      </div>
+      <div class="footer-links">
+        <a href="design-journal.html">Design Journal</a>
+        <a href="chi-siamo.html">Chi Siamo</a>
+        <a href="#">Privacy policy</a>
+        <a href="#">Cookie policy</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="moodboards-data.js"></script>
 </body>
 </html>
-
 
