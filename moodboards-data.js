@@ -36,41 +36,333 @@ const quizData = [
 ];
 
 const moodboardsDB = {
-  "MOD-ACC-LUM": { stile: "Moderno", mood: "Accogliente", palette: "Luminosa", tipo: "Moodboard A", hex: ["#F7F5F0", "#D9C5B2", "#8C7A6B", "#C87D55"] },
-  "MOD-ACC-COL": { stile: "Moderno", mood: "Accogliente", palette: "Colorata", tipo: "Moodboard B", hex: ["#EFE6DD", "#C85A32", "#4A6B5D", "#E2953A"] },
-  "MOD-SER-LUM": { stile: "Moderno", mood: "Sereno", palette: "Luminosa", tipo: "Moodboard A", hex: ["#F4F6F6", "#D2DCE0", "#9BB0B8", "#6C8894"] },
-  "MOD-SER-COL": { stile: "Moderno", mood: "Sereno", palette: "Colorata", tipo: "Moodboard B", hex: ["#E6ECEB", "#5B8E8D", "#7C98AB", "#D4A373"] },
-  "MOD-ENE-LUM": { stile: "Moderno", mood: "Energico", palette: "Luminosa", tipo: "Moodboard A", hex: ["#FAFAFA", "#EAEAEA", "#F4D35E", "#EE6C4D"] },
-  "MOD-ENE-COL": { stile: "Moderno", mood: "Energico", palette: "Colorata", tipo: "Moodboard B", hex: ["#F2F2F2", "#E63946", "#1D3557", "#FFB703"] },
-  "MOD-LUS-LUM": { stile: "Moderno", mood: "Lussuoso", palette: "Luminosa", tipo: "Moodboard A", hex: ["#F8F6F2", "#E5DEC9", "#C5A880", "#2C2C2C"] },
-  "MOD-LUS-COL": { stile: "Moderno", mood: "Lussuoso", palette: "Colorata", tipo: "Moodboard B", hex: ["#222222", "#1B4332", "#9B2226", "#D4AF37"] },
+  // 1. MODERNO
+  "MOD-ACC-LUM": {
+    stile: "Moderno", mood: "Accogliente", palette: "Luminosa",
+    nome: "Luce Calda Urbana",
+    materiali: "Rovere Chiaro, Lino Grezzo, Travertino",
+    colori: [
+      { nome: "Bianco Calce", hex: "#F7F4EB", ncs: "S 0502-Y" },
+      { nome: "Sabbia", hex: "#EAE2D3", ncs: "S 1005-Y20R" },
+      { nome: "Tortora Chiaro", hex: "#D8C5B0", ncs: "S 2010-Y30R" }
+    ]
+  },
+  "MOD-ACC-COL": {
+    stile: "Moderno", mood: "Accogliente", palette: "Colorata",
+    nome: "Rifugio Urbano Vibrante",
+    materiali: "Noce Canaletto, Velluto, Terracotta",
+    colori: [
+      { nome: "Terracotta", hex: "#C86D51", ncs: "S 3040-Y60R" },
+      { nome: "Verde Salvia", hex: "#8FA38B", ncs: "S 3010-G20Y" },
+      { nome: "Ocra Senape", hex: "#D9A74A", ncs: "S 2050-Y10R" }
+    ]
+  },
+  "MOD-SER-LUM": {
+    stile: "Moderno", mood: "Sereno", palette: "Luminosa",
+    nome: "Brezza Cittadina",
+    materiali: "Vetro Satinato, Frassino Sbiancato, Cotone",
+    colori: [
+      { nome: "Bianco Ghiaccio", hex: "#F2F5F7", ncs: "S 0502-B" },
+      { nome: "Azzurro Polvere", hex: "#C5D5DF", ncs: "S 1510-R90B" },
+      { nome: "Grigio Salvia", hex: "#CBD4CD", ncs: "S 1505-G" }
+    ]
+  },
+  "MOD-SER-COL": {
+    stile: "Moderno", mood: "Sereno", palette: "Colorata",
+    nome: "Oasi Urbana",
+    materiali: "Rovere Termotrattato, Lana Bouclé, Pietra",
+    colori: [
+      { nome: "Verde Petrolio", hex: "#2A5C55", ncs: "S 6020-B70G" },
+      { nome: "Blu Abisso", hex: "#2B3D54", ncs: "S 7020-R90B" },
+      { nome: "Eucalipto", hex: "#84968B", ncs: "S 4010-B90G" }
+    ]
+  },
+  "MOD-ENE-LUM": {
+    stile: "Moderno", mood: "Energico", palette: "Luminosa",
+    nome: "Luce Dinamica",
+    materiali: "Fenix Opaco, Betulla, Metallo",
+    colori: [
+      { nome: "Bianco Puro", hex: "#F8F9FA", ncs: "S 0300-N" },
+      { nome: "Giallo Ambra", hex: "#E8B84B", ncs: "S 1050-Y10R" },
+      { nome: "Blu Avio", hex: "#5B7A9C", ncs: "S 4030-R90B" }
+    ]
+  },
+  "MOD-ENE-COL": {
+    stile: "Moderno", mood: "Energico", palette: "Colorata",
+    nome: "Pop Metropolitano",
+    materiali: "Laccato Colorato, Terrazzo Veneziano",
+    colori: [
+      { nome: "Blu Cobalto", hex: "#2E5A88", ncs: "S 5040-R90B" },
+      { nome: "Corallo Caldo", hex: "#D96B52", ncs: "S 2050-Y70R" },
+      { nome: "Giallo Ocra", hex: "#E0B243", ncs: "S 1560-Y10R" }
+    ]
+  },
+  "MOD-LUS-LUM": {
+    stile: "Moderno", mood: "Lussuoso", palette: "Luminosa",
+    nome: "Eleganza Cristallina",
+    materiali: "Marmo Calacatta, Ottone Rosa, Velluto",
+    colori: [
+      { nome: "Bianco Marmo", hex: "#F3EFEA", ncs: "S 0502-Y50R" },
+      { nome: "Rosa Antico", hex: "#C49A93", ncs: "S 2515-Y80R" },
+      { nome: "Grigio Perla Caldo", hex: "#ACA69F", ncs: "S 3502-Y" }
+    ]
+  },
+  "MOD-LUS-COL": {
+    stile: "Moderno", mood: "Lussuoso", palette: "Colorata",
+    nome: "Velluto Moderno",
+    materiali: "Marmo Sahara Noir, Ottone Brunito, Pelle",
+    colori: [
+      { nome: "Bordeaux", hex: "#5E2129", ncs: "S 6030-R" },
+      { nome: "Oro Ottone", hex: "#C2A353", ncs: "S 2040-Y" },
+      { nome: "Antracite", hex: "#3A4248", ncs: "S 7502-B" }
+    ]
+  },
 
-  "MIN-ACC-LUM": { stile: "Minimalista", mood: "Accogliente", palette: "Luminosa", tipo: "Moodboard A", hex: ["#FAF8F5", "#EAE3D9", "#C7B9A5", "#9C8975"] },
-  "MIN-ACC-COL": { stile: "Minimalista", mood: "Accogliente", palette: "Colorata", tipo: "Moodboard B", hex: ["#F3EDE4", "#B86B4B", "#7A8471", "#D9A05B"] },
-  "MIN-SER-LUM": { stile: "Minimalista", mood: "Sereno", palette: "Luminosa", tipo: "Moodboard A", hex: ["#FFFFFF", "#F0F2F2", "#D5D9D9", "#A3ACAC"] },
-  "MIN-SER-COL": { stile: "Minimalista", mood: "Sereno", palette: "Colorata", tipo: "Moodboard B", hex: ["#EFF3F1", "#8DA399", "#9EB1B8", "#C9B79C"] },
-  "MIN-ENE-LUM": { stile: "Minimalista", mood: "Energico", palette: "Luminosa", tipo: "Moodboard A", hex: ["#F9F9F9", "#E2E2E2", "#F2C94C", "#2F80ED"] },
-  "MIN-ENE-COL": { stile: "Minimalista", mood: "Energico", palette: "Colorata", tipo: "Moodboard B", hex: ["#F4F4F4", "#FF5A36", "#0066CC", "#FFD100"] },
-  "MIN-LUS-LUM": { stile: "Minimalista", mood: "Lussuoso", palette: "Luminosa", tipo: "Moodboard A", hex: ["#F6F5F2", "#DFDCD5", "#B0A695", "#3A3835"] },
-  "MIN-LUS-COL": { stile: "Minimalista", mood: "Lussuoso", palette: "Colorata", tipo: "Moodboard B", hex: ["#2B2A29", "#5C3A21", "#3D4C41", "#C2A378"] },
+  // 2. MINIMALISTA
+  "MIN-ACC-LUM": {
+    stile: "Minimalista", mood: "Accogliente", palette: "Luminosa",
+    nome: "Nuvola Zen",
+    materiali: "Microcemento Caldo, Lino, Bambù",
+    colori: [
+      { nome: "Lino Chiaro", hex: "#F7F3EA", ncs: "S 0502-Y20R" },
+      { nome: "Corda Naturale", hex: "#DFCFB7", ncs: "S 1510-Y20R" },
+      { nome: "Legno Chiaro", hex: "#C2A788", ncs: "S 3015-Y20R" }
+    ]
+  },
+  "MIN-ACC-COL": {
+    stile: "Minimalista", mood: "Accogliente", palette: "Colorata",
+    nome: "Zen Terrestre",
+    materiali: "Intonaco di Argilla, Rovere Scuro, Juta",
+    colori: [
+      { nome: "Terra di Siena", hex: "#A8543A", ncs: "S 4040-Y60R" },
+      { nome: "Verde Oliva", hex: "#7A7B52", ncs: "S 5020-G80Y" },
+      { nome: "Ocra Dorata", hex: "#C98D48", ncs: "S 2050-Y20R" }
+    ]
+  },
+  "MIN-SER-LUM": {
+    stile: "Minimalista", mood: "Sereno", palette: "Luminosa",
+    nome: "Sottrazione Pura",
+    materiali: "Resina Bianca, Vetro Extrachiaro, Acciaio",
+    colori: [
+      { nome: "Bianco Neve", hex: "#F7F8F6", ncs: "S 0300-N" },
+      { nome: "Grigio Nebbia", hex: "#DBDDDC", ncs: "S 1500-N" },
+      { nome: "Pietra Serena", hex: "#B5BAB8", ncs: "S 3000-N" }
+    ]
+  },
+  "MIN-SER-COL": {
+    stile: "Minimalista", mood: "Sereno", palette: "Colorata",
+    nome: "Profondità Calma",
+    materiali: "Ardesia Naturale, Pino Nordico, Lana",
+    colori: [
+      { nome: "Blu Ardesia", hex: "#4B6073", ncs: "S 6020-R90B" },
+      { nome: "Verde Pino", hex: "#3A5A4B", ncs: "S 6020-G10Y" },
+      { nome: "Grigio Ferro", hex: "#5C6064", ncs: "S 6502-B" }
+    ]
+  },
+  "MIN-ENE-LUM": {
+    stile: "Minimalista", mood: "Energico", palette: "Luminosa",
+    nome: "Spazio Attivo",
+    materiali: "Cemento Lisciato, Acciaio, Compensato",
+    colori: [
+      { nome: "Bianco Gesso", hex: "#F4F2ED", ncs: "S 0502-Y" },
+      { nome: "Albicocca", hex: "#E68A5C", ncs: "S 1050-Y50R" },
+      { nome: "Grigio Cemento", hex: "#9EA2A2", ncs: "S 4000-N" }
+    ]
+  },
+  "MIN-ENE-COL": {
+    stile: "Minimalista", mood: "Energico", palette: "Colorata",
+    nome: "Equilibrio Grafico",
+    materiali: "Metallo Nero Opaco, Cotto, Frassino",
+    colori: [
+      { nome: "Nero Carbone", hex: "#2C2E30", ncs: "S 8500-N" },
+      { nome: "Rosso Mattone", hex: "#B8533C", ncs: "S 3050-Y70R" },
+      { nome: "Sabbia Fredda", hex: "#DFDCD4", ncs: "S 1502-Y" }
+    ]
+  },
+  "MIN-LUS-LUM": {
+    stile: "Minimalista", mood: "Lussuoso", palette: "Luminosa",
+    nome: "Essenza Preziosa",
+    materiali: "Travertino Romano, Seta Grezza, Bronzo",
+    colori: [
+      { nome: "Perla", hex: "#EAE4DC", ncs: "S 1002-Y50R" },
+      { nome: "Platino", hex: "#D4CFC7", ncs: "S 2002-Y" },
+      { nome: "Tortora", hex: "#9C9288", ncs: "S 4005-Y20R" }
+    ]
+  },
+  "MIN-LUS-COL": {
+    stile: "Minimalista", mood: "Lussuoso", palette: "Colorata",
+    nome: "Pura Opulenza",
+    materiali: "Legno Ebano, Ottone Spazzolato, Pelle",
+    colori: [
+      { nome: "Prugna Scuro", hex: "#4E3244", ncs: "S 7020-R30B" },
+      { nome: "Bronzo Dorato", hex: "#B59449", ncs: "S 3040-Y" },
+      { nome: "Grafite", hex: "#2B2D2F", ncs: "S 8502-B" }
+    ]
+  },
 
-  "CLA-ACC-LUM": { stile: "Classico", mood: "Accogliente", palette: "Luminosa", tipo: "Moodboard A", hex: ["#F9F6F0", "#E6DCCA", "#B89F81", "#7D5A3C"] },
-  "CLA-ACC-COL": { stile: "Classico", mood: "Accogliente", palette: "Colorata", tipo: "Moodboard B", hex: ["#F2E8DC", "#8C3B2B", "#4F6348", "#C8963E"] },
-  "CLA-SER-LUM": { stile: "Classico", mood: "Sereno", palette: "Luminosa", tipo: "Moodboard A", hex: ["#F5F7F6", "#DCE3E0", "#AEC0BA", "#788F88"] },
-  "CLA-SER-COL": { stile: "Classico", mood: "Sereno", palette: "Colorata", tipo: "Moodboard B", hex: ["#E8EFEA", "#6B8E78", "#6C899E", "#C4A882"] },
-  "CLA-ENE-LUM": { stile: "Classico", mood: "Energico", palette: "Luminosa", tipo: "Moodboard A", hex: ["#FAF7F2", "#E8DFD1", "#D9A441", "#3B6978"] },
-  "CLA-ENE-COL": { stile: "Classico", mood: "Energico", palette: "Colorata", tipo: "Moodboard B", hex: ["#F4EFE6", "#9E2A2B", "#1F4E78", "#D99B26"] },
-  "CLA-LUS-LUM": { stile: "Classico", mood: "Lussuoso", palette: "Luminosa", tipo: "Moodboard A", hex: ["#F7F4EB", "#E3DAC9", "#C2A878", "#4A3C2C"] },
-  "CLA-LUS-COL": { stile: "Classico", mood: "Lussuoso", palette: "Colorata", tipo: "Moodboard B", hex: ["#1C252C", "#591C21", "#1B4332", "#C5A059"] },
+  // 3. CLASSICO
+  "CLA-ACC-LUM": {
+    stile: "Classico", mood: "Accogliente", palette: "Luminosa",
+    nome: "Focolare Antico",
+    materiali: "Boiserie in Gesso, Parquet a Spina, Velluto",
+    colori: [
+      { nome: "Crema Antico", hex: "#F7EFE1", ncs: "S 0505-Y20R" },
+      { nome: "Beige Dorato", hex: "#CBB292", ncs: "S 2015-Y20R" },
+      { nome: "Noce Caldo", hex: "#7A543E", ncs: "S 6020-Y50R" }
+    ]
+  },
+  "CLA-ACC-COL": {
+    stile: "Classico", mood: "Accogliente", palette: "Colorata",
+    nome: "Salotto d'Epoca",
+    materiali: "Pelle Capitonnè, Mogano, Ottone Antico",
+    colori: [
+      { nome: "Rosso Inglese", hex: "#9E3B3B", ncs: "S 4050-Y90R" },
+      { nome: "Verde Bosco", hex: "#2E4F3E", ncs: "S 7020-G10Y" },
+      { nome: "Oro Antico", hex: "#C2A353", ncs: "S 2040-Y" }
+    ]
+  },
+  "CLA-SER-LUM": {
+    stile: "Classico", mood: "Sereno", palette: "Luminosa",
+    nome: "Villa Palladiana",
+    materiali: "Stucco Veneziano, Marmo Chiaro, Seta",
+    colori: [
+      { nome: "Verde Celadon", hex: "#C7D6C5", ncs: "S 1510-G10Y" },
+      { nome: "Avorio", hex: "#F2EAE1", ncs: "S 0804-Y30R" },
+      { nome: "Rosa Cipria", hex: "#E2C6C2", ncs: "S 1510-Y80R" }
+    ]
+  },
+  "CLA-SER-COL": {
+    stile: "Classico", mood: "Sereno", palette: "Colorata",
+    nome: "Biblioteca Notturna",
+    materiali: "Legno di Ciliegio, Velluto Liscio, Carta da Parati",
+    colori: [
+      { nome: "Blu Oltremare", hex: "#23395B", ncs: "S 7020-R80B" },
+      { nome: "Verde Smeraldo", hex: "#2A5C43", ncs: "S 6030-B90G" },
+      { nome: "Legno Mogano", hex: "#6E3B2B", ncs: "S 6030-Y60R" }
+    ]
+  },
+  "CLA-ENE-LUM": {
+    stile: "Classico", mood: "Energico", palette: "Luminosa",
+    nome: "Rinascimento Solare",
+    materiali: "Damasco di Seta, Cristallo di Boemia, Stucco",
+    colori: [
+      { nome: "Giallo Napoli", hex: "#EED484", ncs: "S 1030-Y" },
+      { nome: "Azzurro Savoia", hex: "#A5C4D4", ncs: "S 2020-B" },
+      { nome: "Bianco Stucco", hex: "#F7F3E8", ncs: "S 0502-Y" }
+    ]
+  },
+  "CLA-ENE-COL": {
+    stile: "Classico", mood: "Energico", palette: "Colorata",
+    nome: "Maestà Dinamica",
+    materiali: "Tappeti Persiani, Legno Intarsiato, Broccato",
+    colori: [
+      { nome: "Rosso Veneziano", hex: "#A62B2B", ncs: "S 3060-Y90R" },
+      { nome: "Blu Reale", hex: "#2B4C7E", ncs: "S 5040-R80B" },
+      { nome: "Oro Imperiale", hex: "#D4AC42", ncs: "S 2050-Y" }
+    ]
+  },
+  "CLA-LUS-LUM": {
+    stile: "Classico", mood: "Lussuoso", palette: "Luminosa",
+    nome: "Salone degli Specchi",
+    materiali: "Foglia d'Oro, Marmo Statuario, Specchi Antichi",
+    colori: [
+      { nome: "Avorio Reale", hex: "#F7F5EE", ncs: "S 0502-Y" },
+      { nome: "Foglia d'Oro", hex: "#D1B262", ncs: "S 2030-Y" },
+      { nome: "Acquamarina", hex: "#9CC2BD", ncs: "S 2020-B50G" }
+    ]
+  },
+  "CLA-LUS-COL": {
+    stile: "Classico", mood: "Lussuoso", palette: "Colorata",
+    nome: "Reggia Imperiale",
+    materiali: "Velluto di Seta, Marmo Verde Alpi, Bronzo",
+    colori: [
+      { nome: "Rosso Rubino", hex: "#7A1F34", ncs: "S 5040-R10B" },
+      { nome: "Blu Zaffiro", hex: "#1F3A68", ncs: "S 6030-R80B" },
+      { nome: "Bronzo Antico", hex: "#9C7A44", ncs: "S 4030-Y10R" }
+    ]
+  },
 
-  "BOE-ACC-LUM": { stile: "Boemo", mood: "Accogliente", palette: "Luminosa", tipo: "Moodboard A", hex: ["#FBF7F2", "#EADBC8", "#CFA882", "#A66E4E"] },
-  "BOE-ACC-COL": { stile: "Boemo", mood: "Accogliente", palette: "Colorata", tipo: "Moodboard B", hex: ["#F5EBE0", "#C85A32", "#6B705C", "#DDA15E"] },
-  "BOE-SER-LUM": { stile: "Boemo", mood: "Sereno", palette: "Luminosa", tipo: "Moodboard A", hex: ["#F7F7F2", "#E0E2D5", "#B5BFA8", "#8A9A7B"] },
-  "BOE-SER-COL": { stile: "Boemo", mood: "Sereno", palette: "Colorata", tipo: "Moodboard B", hex: ["#EDF1EC", "#7F9C86", "#87A8B5", "#D4A373"] },
-  "BOE-ENE-LUM": { stile: "Boemo", mood: "Energico", palette: "Luminosa", tipo: "Moodboard A", hex: ["#FCF9F2", "#F2E2C4", "#E09F3E", "#C8553D"] },
-  "BOE-ENE-COL": { stile: "Boemo", mood: "Energico", palette: "Colorata", tipo: "Moodboard B", hex: ["#F8F1E5", "#D62828", "#2A9D8F", "#F77F00"] },
-  "BOE-LUS-LUM": { stile: "Boemo", mood: "Lussuoso", palette: "Luminosa", tipo: "Moodboard A", hex: ["#F9F5EE", "#E6D7C3", "#C69C6D", "#5E432C"] },
-  "BOE-LUS-COL": { stile: "Boemo", mood: "Lussuoso", palette: "Colorata", tipo: "Moodboard B", hex: ["#2D1E2F", "#7A2048", "#1E4D40", "#D4A359"] }
+  // 4. BOEMO
+  "BOE-ACC-LUM": {
+    stile: "Boemo", mood: "Accogliente", palette: "Luminosa",
+    nome: "Sogno Nomade",
+    materiali: "Rattan Intrecciato, Macramè di Cotone, Lino",
+    colori: [
+      { nome: "Cotone Naturale", hex: "#F5F2EB", ncs: "S 0502-Y" },
+      { nome: "Rosa Pesca", hex: "#F0CFB6", ncs: "S 1015-Y40R" },
+      { nome: "Rattan", hex: "#D8B480", ncs: "S 2020-Y20R" }
+    ]
+  },
+  "BOE-ACC-COL": {
+    stile: "Boemo", mood: "Accogliente", palette: "Colorata",
+    nome: "Bazar Caldo",
+    materiali: "Tappeti Kilim, Lana Tessuta a Mano, Cotto",
+    colori: [
+      { nome: "Cannella", hex: "#C45A36", ncs: "S 3050-Y50R" },
+      { nome: "Rosso Melograno", hex: "#9E3654", ncs: "S 4040-R20B" },
+      { nome: "Curcuma", hex: "#D99B38", ncs: "S 2060-Y10R" }
+    ]
+  },
+  "BOE-SER-LUM": {
+    stile: "Boemo", mood: "Sereno", palette: "Luminosa",
+    nome: "Rifugio Mistico",
+    materiali: "Garza di Cotone, Ceramica Artigianale, Legno",
+    colori: [
+      { nome: "Lavanda Polvere", hex: "#DCD6E6", ncs: "S 1510-R60B" },
+      { nome: "Salvia Chiara", hex: "#B5BFA8", ncs: "S 2510-G30Y" },
+      { nome: "Bianco Caldo", hex: "#F4F2ED", ncs: "S 0502-Y" }
+    ]
+  },
+  "BOE-SER-COL": {
+    stile: "Boemo", mood: "Sereno", palette: "Colorata",
+    nome: "Giardino Segreto",
+    materiali: "Piante Tropicali, Vimini, Velluto Liscio",
+    colori: [
+      { nome: "Verde Foglia", hex: "#3B6E52", ncs: "S 5030-G10Y" },
+      { nome: "Borgogna", hex: "#632B3B", ncs: "S 6030-R20B" },
+      { nome: "Malva", hex: "#B899B0", ncs: "S 3015-R40B" }
+    ]
+  },
+  "BOE-ENE-LUM": {
+    stile: "Boemo", mood: "Energico", palette: "Luminosa",
+    nome: "Festival Solare",
+    materiali: "Maioliche Dipinte, Paglia di Vienna, Pino",
+    colori: [
+      { nome: "Zafferano", hex: "#E6B84C", ncs: "S 1550-Y10R" },
+      { nome: "Menta Acquatica", hex: "#A3C9B8", ncs: "S 2020-B90G" },
+      { nome: "Corallo Polvere", hex: "#E08D79", ncs: "S 2030-Y70R" }
+    ]
+  },
+  "BOE-ENE-COL": {
+    stile: "Boemo", mood: "Energico", palette: "Colorata",
+    nome: "Spirito Libero",
+    materiali: "Tessuti Ikat, Legno di Mango, Rame",
+    colori: [
+      { nome: "Magenta", hex: "#B03060", ncs: "S 3050-R20B" },
+      { nome: "Verde Giada", hex: "#557A46", ncs: "S 4040-G30Y" },
+      { nome: "Mandarino", hex: "#D97236", ncs: "S 2060-Y50R" }
+    ]
+  },
+  "BOE-LUS-LUM": {
+    stile: "Boemo", mood: "Lussuoso", palette: "Luminosa",
+    nome: "Oasi Eclettica",
+    materiali: "Rame Martellato, Seta Cruda, Madreperla",
+    colori: [
+      { nome: "Crema di Seta", hex: "#F7EFE1", ncs: "S 0505-Y20R" },
+      { nome: "Rame", hex: "#B8734B", ncs: "S 3040-Y50R" },
+      { nome: "Turchese Pallido", hex: "#88B8B0", ncs: "S 2520-B50G" }
+    ]
+  },
+  "BOE-LUS-COL": {
+    stile: "Boemo", mood: "Lussuoso", palette: "Colorata",
+    nome: "Viaggiatore Elegante",
+    materiali: "Legno di Teak, Velluto Ricamato, Ottone",
+    colori: [
+      { nome: "Blu Pavone", hex: "#1F637A", ncs: "S 5030-B10G" },
+      { nome: "Verde Giungla", hex: "#1B4D3E", ncs: "S 7020-B90G" },
+      { nome: "Oro Antico", hex: "#B58942", ncs: "S 3050-Y10R" }
+    ]
+  }
 };
 
 let currentQuestionIndex = 0;
@@ -82,15 +374,6 @@ const questionSubtitleElement = document.getElementById("question-subtitle");
 const optionsElement = document.getElementById("options");
 const quizContainer = document.getElementById("quiz-container");
 const resultCard = document.getElementById("result-card");
-
-function getContrastYIQ(hexcolor) {
-  const cleanHex = hexcolor.replace("#", "");
-  const r = parseInt(cleanHex.substr(0, 2), 16);
-  const g = parseInt(cleanHex.substr(2, 2), 16);
-  const b = parseInt(cleanHex.substr(4, 2), 16);
-  const yiq = ((r * 299) + (g * 587) + (b * 114)) / 1000;
-  return (yiq >= 128) ? "#222222" : "#FFFFFF";
-}
 
 function showQuestion() {
   optionsElement.innerHTML = "";
@@ -149,47 +432,53 @@ function actualizarMoodboard(codigo) {
   const imgElement = document.getElementById("moodboard-img");
   if (imgElement) {
     imgElement.src = `pictures/${codigo.toLowerCase()}.png`;
-    imgElement.alt = `${data.stile} ${data.mood} ${data.palette}`;
+    imgElement.alt = `${data.nome} - ${data.stile} ${data.mood} ${data.palette}`;
   }
 
   document.getElementById("code-output").textContent = codigo;
-  document.getElementById("moodboard-type").textContent = data.tipo;
+  document.getElementById("moodboard-type").textContent = `La tua Moodboard: ${data.nome}`;
   document.getElementById("desc-output").textContent = `${data.stile} • ${data.mood} • ${data.palette}`;
-
-// resultCard.style.backgroundColor = data.hex[0];
-//resultCard.style.color = getContrastYIQ(data.hex[0]);
 
   const grid = document.getElementById("palette-grid");
   grid.innerHTML = "";
 
-  data.hex.forEach(color => {
-    const swatch = document.createElement("div");
-    swatch.className = "color-swatch";
-    swatch.style.backgroundColor = color;
-    swatch.style.color = getContrastYIQ(color);
-    swatch.textContent = color;
-    swatch.title = "Clicca per copiare HEX";
+  data.colori.forEach(colore => {
+    const item = document.createElement("div");
+    item.className = "palette-item";
+    item.title = "Clicca per copiare HEX e NCS";
 
-    swatch.onclick = () => {
-navigator.clipboard.writeText(color);
-const hint = document.getElementById("copy-hint");
-if (hint) {
-hint.textContent = `Colore ${color} copiato negli appunti!`;
-setTimeout(() => {
-hint.textContent = "Clicca su un colore per copiare il codice HEX";
-}, 2000);
+    item.innerHTML = `
+      <div class="color-swatch" style="background-color: ${colore.hex};"></div>
+      <div class="color-details">
+        <span class="color-name">${colore.nome}</span>
+        <span class="color-codes">HEX ${colore.hex} &nbsp;•&nbsp; NCS ${colore.ncs}</span>
+      </div>
+    `;
+
+    item.onclick = () => {
+      const testoDaCopiare = `${colore.nome} — HEX: ${colore.hex} | NCS: ${colore.ncs}`;
+      navigator.clipboard.writeText(testoDaCopiare);
+      const hint = document.getElementById("copy-hint");
+      if (hint) {
+        hint.textContent = `Copiato: ${colore.nome} (${colore.hex} / NCS ${colore.ncs})`;
+        setTimeout(() => {
+          hint.textContent = "Clicca su un colore per copiare i codici HEX e NCS";
+        }, 2500);
+      }
+    };
+
+    grid.appendChild(item);
+  });
 }
-};
-grid.appendChild(swatch);
-});
-}
+
 function restartQuiz() {
-currentQuestionIndex = 0;
-userChoices = [];
-resultCard.style.display = "none";
-quizContainer.style.display = "block";
-showQuestion();
+  currentQuestionIndex = 0;
+  userChoices = [];
+  resultCard.style.display = "none";
+  quizContainer.style.display = "block";
+  showQuestion();
 }
+
 // Inicia el quiz al cargar
 showQuestion();
 
