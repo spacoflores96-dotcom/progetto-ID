@@ -146,8 +146,17 @@ function actualizarMoodboard(codigo) {
   imgElement.alt = `${data.stile} ${data.mood} ${data.palette}`;
 }
 
+ function actualizarMoodboard(codigo) {
+  // 1. Prima recuperiamo i dati e verifichiamo che esistano
   const data = moodboardsDB[codigo];
   if (!data) return;
+
+  // 2. Ora possiamo usare 'data' in sicurezza per l'immagine
+  const imgElement = document.getElementById("moodboard-img");
+  if (imgElement) {
+    imgElement.src = `pictures/${codigo.toLowerCase()}.png`;
+    imgElement.alt = `${data.stile} ${data.mood} ${data.palette}`;
+  }
 
   document.getElementById("code-output").textContent = codigo;
   document.getElementById("moodboard-type").textContent = data.tipo;
@@ -181,7 +190,15 @@ function actualizarMoodboard(codigo) {
   });
 }
 
-// Funzione per ricominciare il quiz
+// Funzione per ricominciare il quiz completata
 function restartQuiz() {
   currentQuestionIndex = 0;
   userChoices = [];
+  resultCard.style.display = "none";
+  quizContainer.style.display = "block";
+  showQuestion();
+}
+
+// Avvia il quiz al caricamento
+showQuestion();
+
