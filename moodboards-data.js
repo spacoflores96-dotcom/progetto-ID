@@ -156,8 +156,8 @@ function actualizarMoodboard(codigo) {
   document.getElementById("moodboard-type").textContent = data.tipo;
   document.getElementById("desc-output").textContent = `${data.stile} • ${data.mood} • ${data.palette}`;
 
- resultCard.style.backgroundColor = data.hex[0];
-resultCard.style.color = getContrastYIQ(data.hex[0]);
+// resultCard.style.backgroundColor = data.hex[0];
+//resultCard.style.color = getContrastYIQ(data.hex[0]);
 
   const grid = document.getElementById("palette-grid");
   grid.innerHTML = "";
