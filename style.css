@@ -735,12 +735,17 @@ h1, h2, h3, h4,
 /* Card Risultato */
 #result-card {
   width: calc(100% - 32px);
-  max-width: 600px;
-  margin: 48px auto;
-  background-color: var(--bg-card);
-  border: 1px solid var(--border-sand);
-  padding: 36px;
+  max-width: 1050px;
+  margin: 48px auto 80px auto;
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  text-align: left;
+}
+
+.result-header {
   text-align: center;
+  margin-bottom: 48px;
 }
 
 #code-output {
@@ -749,48 +754,55 @@ h1, h2, h3, h4,
   font-weight: 700;
   letter-spacing: 0.12em;
   padding: 4px 12px;
-  background-color: var(--bg-cream);
+  background-color: var(--bg-banner);
   color: var(--accent-terracotta);
   margin-bottom: 12px;
 }
 
 #moodboard-type {
   font-family: var(--font-serif);
-  font-size: 2rem;
+  font-size: 2.6rem;
   font-weight: 500;
-  margin-bottom: 6px;
+  margin-bottom: 8px;
 }
 
 #desc-output {
   font-size: 0.95rem;
   color: var(--text-muted);
-  margin-bottom: 24px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
-#moodboard-img {
-  width: 100%;
-  border: none;
-  margin-bottom: 20px;
-  display: block;
+.result-body {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: 48px;
+  align-items: start;
+}
+
+.result-left h3 {
+  font-size: 1.8rem;
+  margin-bottom: 24px;
 }
 
 #palette-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 10px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
   margin-bottom: 12px;
 }
 
 .color-swatch {
-  height: 60px;
+  height: 75px;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  align-items: flex-end;
+  padding: 10px;
   font-family: monospace;
-  font-size: 0.8rem;
+  font-size: 0.85rem;
   font-weight: 600;
   cursor: pointer;
-  border: 1px solid rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(44, 46, 48, 0.12);
+  border-radius: var(--radius-sm);
   transition: transform 0.2s ease;
 }
 
@@ -802,7 +814,14 @@ h1, h2, h3, h4,
   display: block;
   font-size: 0.8rem;
   color: var(--text-muted);
-  margin-bottom: 24px;
+  margin-bottom: 28px;
+}
+
+#moodboard-img {
+  width: 100%;
+  border: none;
+  border-radius: var(--radius-sm);
+  display: block;
 }
 
 #result-card button {
@@ -811,17 +830,18 @@ h1, h2, h3, h4,
   font-family: inherit;
   font-size: 0.9rem;
   font-weight: 600;
-  letter-spacing: 0.04em;
   color: var(--bg-card);
-  background-color: var(--bg-dark);
+  background-color: var(--accent-terracotta);
   border: none;
+  border-radius: var(--radius-sm);
   cursor: pointer;
-  transition: background-color 0.2s ease;
+  transition: opacity 0.2s ease;
 }
 
 #result-card button:hover {
-  background-color: var(--accent-terracotta);
+  opacity: 0.9;
 }
+
 
 /* =========================================
    8. RESPONSIVE (Mobile e Tablet)
@@ -840,7 +860,8 @@ h1, h2, h3, h4,
   .grid-2-cols,
   .grid-3-cols,
   .footer-content,
-  #options {
+   .result-body,
+#options {
     grid-template-columns: 1fr;
     gap: 24px;
   }
