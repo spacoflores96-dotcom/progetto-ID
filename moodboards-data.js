@@ -145,8 +145,8 @@ function actualizarMoodboard(codigo) {
   imgElement.src = `pictures/${codigo.toLowerCase()}.png`;
   imgElement.alt = `${data.stile} ${data.mood} ${data.palette}`;
 }
-
- function actualizarMoodboard(codigo) {
+  
+function actualizarMoodboard(codigo) {
   // 1. Prima recuperiamo i dati e verifichiamo che esistano
   const data = moodboardsDB[codigo];
   if (!data) return;
@@ -180,10 +180,12 @@ function actualizarMoodboard(codigo) {
     swatch.onclick = () => {
       navigator.clipboard.writeText(color);
       const hint = document.getElementById("copy-hint");
-      hint.textContent = `Colore ${color} copiato negli appunti!`;
-      setTimeout(() => {
-        hint.textContent = "Clicca su un colore per copiare il codice HEX";
-      }, 2000);
+      if (hint) {
+        hint.textContent = `Colore ${color} copiato negli appunti!`;
+        setTimeout(() => {
+          hint.textContent = "Clicca su un colore per copiare il codice HEX";
+        }, 2000);
+      }
     };
 
     grid.appendChild(swatch);
@@ -202,3 +204,4 @@ function restartQuiz() {
 // Avvia il quiz al caricamento
 showQuestion();
 
+ 
