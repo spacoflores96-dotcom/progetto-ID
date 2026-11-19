@@ -1,31 +1,30 @@
 // Disposizione delle domande, delle opzioni con immagini e della risposta
 const quizData = [
-  const quizData = [
   {
     question: "Qual è il tuo stile preferito?",
     options: [
-      { title: "Moderno", desc: "Linee pulite, carattere contemporaneo.", img: "pictures/moderno.jpg" },
-      { title: "Minimalista", desc: "L'essenziale, con naturalezza.", img: "pictures/minimalista.jpg" },
-      { title: "Classico", desc: "Un'eleganza senza tempo.", img: "pictures/classico.jpg" },
-      { title: "Boemo", desc: "Texture, calore e libertà.", img: "pictures/boemo.jpg" }
+      { title: "Moderno", desc: "Linee pulite, carattere contemporaneo.", img: "pictures/quizdomanda1moderno.png" },
+      { title: "Minimalista", desc: "L'essenziale, con naturalezza.", img: "pictures/quizdomanda1minimalista.png" },
+      { title: "Classico", desc: "Un'eleganza senza tempo.", img: "pictures/quizdomanda1classico.png" },
+      { title: "Boemo", desc: "Texture, calore e libertà.", img: "pictures/quizdomanda1boemo.png" }
     ],
     keys: ["MOD", "MIN", "CLA", "BOE"]
   },
   {
     question: "Scegli il mood che senti ti rappresenta di più",
     options: [
-      { title: "Accogliente", desc: "Calore, morbidezza e comfort.", img: "pictures/accogliente.jpg" },
-      { title: "Energico", desc: "Contrasti decisi e vitalità.", img: "pictures/energico.jpg" },
-      { title: "Sereno", desc: "Equilibrio, luce e tranquillità.", img: "pictures/sereno.jpg" },
-      { title: "Lussuoso", desc: "Dettagli sofisticati e materiali pregiati.", img: "pictures/lussuoso.jpg" }
+      { title: "Accogliente", desc: "Calore, morbidezza e comfort.", img: "pictures/quizdomanda2accogliente.png" },
+      { title: "Energico", desc: "Contrasti decisi e vitalità.", img: "pictures/quizdomanda2energico.png" },
+      { title: "Sereno", desc: "Equilibrio, luce e tranquillità.", img: "pictures/quizdomanda2sereno.png" },
+      { title: "Lussuoso", desc: "Dettagli sofisticati e materiales pregiati.", img: "pictures/quizdomanda2lussuoso.png" }
     ],
     keys: ["ACC", "ENE", "SER", "LUS"]
   },
   {
     question: "Quali toni si adattano meglio al tuo spazio?",
     options: [
-      { title: "Luminosa", desc: "Tonalità neutre, chiare e ariose.", img: "pictures/luminosa.jpg" },
-      { title: "Colorata", desc: "Accenti vibranti e personalità.", img: "pictures/colorata.jpg" }
+      { title: "Luminosa", desc: "Tonalità neutre, chiare e ariose.", img: "pictures/quizdomanda3luminosa.png" },
+      { title: "Colorata", desc: "Accenti vibranti e personalità.", img: "pictures/quizdomanda3colorata.png" }
     ],
     keys: ["LUM", "COL"]
   }
