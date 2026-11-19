@@ -140,6 +140,12 @@ function showQuizEnd() {
 }
 
 function actualizarMoodboard(codigo) {
+  const imgElement = document.getElementById("moodboard-img");
+  if (imgElement) {
+  imgElement.src = `pictures/${codigo.toLowerCase()}.png`;
+  imgElement.alt = `${data.stile} ${data.mood} ${data.palette}`;
+}
+
   const data = moodboardsDB[codigo];
   if (!data) return;
 
