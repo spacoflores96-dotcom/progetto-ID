@@ -379,3 +379,9 @@ h1, h2, h3, .logo, .footer-brand h3 {
   font-size: 0.85rem;
   color: #2C2C2C;
 }
+
+.logo img {
+  height: 40px; 
+  width: auto;  
+  display: block;
+}
