@@ -156,8 +156,8 @@ function actualizarMoodboard(codigo) {
   document.getElementById("moodboard-type").textContent = data.tipo;
   document.getElementById("desc-output").textContent = `${data.stile} • ${data.mood} • ${data.palette}`;
 
-  resultCard.style.backgroundColor = data.hex;
-  resultCard.style.color = getContrastYIQ(data.hex);
+ resultCard.style.backgroundColor = data.hex[0];
+resultCard.style.color = getContrastYIQ(data.hex[0]);
 
   const grid = document.getElementById("palette-grid");
   grid.innerHTML = "";
@@ -174,7 +174,7 @@ function actualizarMoodboard(codigo) {
 navigator.clipboard.writeText(color);
 const hint = document.getElementById("copy-hint");
 if (hint) {
-hint.textContent = Colore ${color} copiato negli appunti!;
+hint.textContent = `Colore ${color} copiato negli appunti!`;
 setTimeout(() => {
 hint.textContent = "Clicca su un colore per copiare il codice HEX";
 }, 2000);
