@@ -14,46 +14,76 @@ body {
   justify-content: flex-start;
   align-items: center;
   min-height: 100vh;
-  padding: 20px;
 }
 
-/* Barra di navigazione */
-header {
+/* Barra di navigazione (Estilo Tonalia) */
+.site-header {
   width: 100%;
-  max-width: 800px;
+  background-color: #FAF7F0;
+  border-bottom: 1px solid #EAE4D7;
+  padding: 20px 0;
   margin-bottom: 40px;
+}
+
+.header-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.brand {
+  display: flex;
+  flex-direction: column;
+}
+
+.brand-logo {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 32px;
+  color: #262522;
+  text-decoration: none;
+  line-height: 1.1;
+}
+
+.brand-tagline {
+  font-size: 13px;
+  color: #5C5952;
+  margin-top: 4px;
 }
 
 .main-nav {
   display: flex;
-  justify-content: center;
+  align-items: center;
   flex-wrap: wrap;
-  gap: 20px;
-  padding: 16px;
-  background-color: #ffffff;
-  border-radius: 12px;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+  gap: 28px;
 }
 
 .main-nav a {
   text-decoration: none;
-  color: #555555;
+  color: #262522;
   font-size: 0.95rem;
-  font-weight: 500;
-  transition: color 0.2s ease;
+  font-weight: 400;
+  padding-bottom: 6px;
+  border-bottom: 2px solid transparent;
+  transition: border-color 0.2s ease, color 0.2s ease;
 }
 
 .main-nav a:hover,
 .main-nav a.active {
-  color: #2C2C2C;
-  font-weight: 700;
+  color: #262522;
+  border-bottom-color: #C87D4B;
 }
 
 /* Contenitore Quiz e Risultati */
 #quiz-container,
 #result-card {
-  width: 100%;
+  width: calc(100% - 32px);
   max-width: 540px;
+  margin-bottom: 40px;
   background-color: #ffffff;
   border-radius: 16px;
   padding: 36px;
