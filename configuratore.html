@@ -1,59 +1,58 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quiz Moodboard Interior Design</title>  
-    <!-- Enlaces para cargar la fuente DM Sans desde Google Fonts -->
-    <link rel="preconnect" href="https://googleapis.com">
-    <link rel="preconnect" href="https://gstatic.com" crossorigin>
-    <link href="https://googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-    
-    <link rel="stylesheet" href="quiz.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz Moodboard Interior Design</title>
+  <!-- Enlaces corregidos de Google Fonts (DM Sans y Playfair Display para el logo) -->
+  <link rel="preconnect" href="https://googleapis.com">
+  <link rel="preconnect" href="https://gstatic.com" crossorigin>
+  <link href="https://googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="quiz.css">
 </head>
 <body>
-    <title>HEADER / NAVEGACIÓN</title>
+
+  <!-- HEADER / NAVEGACIÓN -->
   <header class="site-header">
-  <div class="container header-inner">
-    <div class="brand">
-      <a href="index.html" class="brand-logo">Tonalia</a>
-      <span class="brand-tagline">Interior design a modo tuo</span>
-    </div>
-        <nav class="main-nav">
-            <a href="configuratore.html">Il Configuratore</a>
-            <a href="esplora-stili.html">Esplora gli Stili</a>
-            <a href="servizi-3d.html">Servizi 3D</a>
-            <a href="design-journal.html">Design Journal</a>
-            <a href="chi-siamo.html" class="active">Chi Siamo</a>
-        </nav>
+    <div class="container header-inner">
+      <div class="brand">
+        <a href="index.html" class="brand-logo">Tonalia</a>
+        <span class="brand-tagline">Interior design a modo tuo</span>
       </div>
-    </header>
-    
-    <div id="quiz-container" class="fade-in">
-        <div class="progress-wrapper">
-            <div class="progress-info">
-                <span id="step-text">Domanda 1 di 3</span>
-            </div>
-            <div class="progress-bar-bg">
-                <div id="progress-fill"></div>
-            </div>
-        </div>
-
-        <div id="question-box">
-            <h2 id="question"></h2>
-            <div id="options"></div>
-        </div>
+      <nav class="main-nav">
+        <a href="configuratore.html">Il Configuratore</a>
+        <a href="esplora-stili.html">Esplora gli Stili</a>
+        <a href="servizi-3d.html">Servizi 3D</a>
+        <a href="design-journal.html">Design Journal</a>
+        <a href="chi-siamo.html" class="active">Chi Siamo</a>
+      </nav>
     </div>
+  </header>
 
-    <div id="result-card" class="fade-in" style="display: none;">
-        <span id="code-output"></span>
-        <h3 id="moodboard-type"></h3>
-        <p id="desc-output"></p>
-        <div id="palette-grid"></div>
-        <small id="copy-hint">Clicca su un colore per copiare il codice HEX</small>
-        <button onclick="restartQuiz()">Ricomincia il quiz</button>
+  <div id="quiz-container" class="fade-in">
+    <div class="progress-wrapper">
+      <div class="progress-info">
+        <span id="step-text">Domanda 1 di 3</span>
+      </div>
+      <div class="progress-bar-bg">
+        <div id="progress-fill"></div>
+      </div>
     </div>
+    <div id="question-box">
+      <h2 id="question"></h2>
+      <div id="options"></div>
+    </div>
+  </div>
 
-    <script src="moodboards-data.js"></script>
+  <div id="result-card" class="fade-in" style="display: none;">
+    <span id="code-output"></span>
+    <h3 id="moodboard-type"></h3>
+    <p id="desc-output"></p>
+    <div id="palette-grid"></div>
+    <small id="copy-hint">Clicca su un colore per copiare il codice HEX</small>
+    <button onclick="restartQuiz()">Ricomincia il quiz</button>
+  </div>
+
+  <script src="moodboards-data.js"></script>
 </body>
 </html>
