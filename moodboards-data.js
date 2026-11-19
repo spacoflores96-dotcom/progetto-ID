@@ -1,7 +1,8 @@
-// Disposizione delle domande, delle opzioni con immagini e della risposta
 const quizData = [
   {
+    stepLabel: "01 / SCEGLI LO STILE",
     question: "Qual è il tuo stile preferito?",
+    subtitle: "Lasciati guidare dalle forme. Scegli l'interno che senti più tuo.",
     options: [
       { title: "Moderno", desc: "Linee pulite, carattere contemporaneo.", img: "pictures/quizdomanda1moderno.png" },
       { title: "Minimalista", desc: "L'essenziale, con naturalezza.", img: "pictures/quizdomanda1minimalista.png" },
@@ -11,17 +12,21 @@ const quizData = [
     keys: ["MOD", "MIN", "CLA", "BOE"]
   },
   {
+    stepLabel: "02 / DEFINISCI IL MOOD",
     question: "Scegli il mood che senti ti rappresenta di più",
+    subtitle: "Pensa all'atmosfera che desideri respirare ogni giorno.",
     options: [
       { title: "Accogliente", desc: "Calore, morbidezza e comfort.", img: "pictures/quizdomanda2accogliente.png" },
       { title: "Energico", desc: "Contrasti decisi e vitalità.", img: "pictures/quizdomanda2energico.png" },
       { title: "Sereno", desc: "Equilibrio, luce e tranquillità.", img: "pictures/quizdomanda2sereno.png" },
-      { title: "Lussuoso", desc: "Dettagli sofisticati e materiales pregiati.", img: "pictures/quizdomanda2lussuoso.png" }
+      { title: "Lussuoso", desc: "Dettagli sofisticati e materiali pregiati.", img: "pictures/quizdomanda2lussuoso.png" }
     ],
     keys: ["ACC", "ENE", "SER", "LUS"]
   },
   {
+    stepLabel: "03 / SCEGLI LA PALETTE",
     question: "Quali toni si adattano meglio al tuo spazio?",
+    subtitle: "Seleziona l'equilibrio cromatico ideale per i tuoi ambienti.",
     options: [
       { title: "Luminosa", desc: "Tonalità neutre, chiare e ariose.", img: "pictures/quizdomanda3luminosa.png" },
       { title: "Colorata", desc: "Accenti vibranti e personalità.", img: "pictures/quizdomanda3colorata.png" }
@@ -71,12 +76,12 @@ const moodboardsDB = {
 let currentQuestionIndex = 0;
 let userChoices = [];
 
+const stepSubtitleElement = document.getElementById("step-subtitle");
 const questionElement = document.getElementById("question");
+const questionSubtitleElement = document.getElementById("question-subtitle");
 const optionsElement = document.getElementById("options");
 const quizContainer = document.getElementById("quiz-container");
 const resultCard = document.getElementById("result-card");
-const stepText = document.getElementById("step-text");
-const progressFill = document.getElementById("progress-fill");
 
 function getContrastYIQ(hexcolor) {
   const cleanHex = hexcolor.replace("#", "");
@@ -90,12 +95,10 @@ function getContrastYIQ(hexcolor) {
 function showQuestion() {
   optionsElement.innerHTML = "";
   const currentQuestion = quizData[currentQuestionIndex];
-  questionElement.innerText = currentQuestion.question;
 
-  // Aggiorna testo e barra di avanzamento
-  stepText.innerText = `Domanda ${currentQuestionIndex + 1} di ${quizData.length}`;
-  const progressPercent = ((currentQuestionIndex + 1) / quizData.length) * 100;
-  progressFill.style.width = `${progressPercent}%`;
+  stepSubtitleElement.innerText = currentQuestion.stepLabel;
+  questionElement.innerText = currentQuestion.question;
+  questionSubtitleElement.innerText = currentQuestion.subtitle;
 
   currentQuestion.options.forEach((option, index) => {
     const button = document.createElement("button");
@@ -140,18 +143,9 @@ function showQuizEnd() {
 }
 
 function actualizarMoodboard(codigo) {
-  const imgElement = document.getElementById("moodboard-img");
-  if (imgElement) {
-  imgElement.src = `pictures/${codigo.toLowerCase()}.png`;
-  imgElement.alt = `${data.stile} ${data.mood} ${data.palette}`;
-}
-  
-function actualizarMoodboard(codigo) {
-  // 1. Prima recuperiamo i dati e verifichiamo che esistano
   const data = moodboardsDB[codigo];
   if (!data) return;
 
-  // 2. Ora possiamo usare 'data' in sicurezza per l'immagine
   const imgElement = document.getElementById("moodboard-img");
   if (imgElement) {
     imgElement.src = `pictures/${codigo.toLowerCase()}.png`;
@@ -162,9 +156,8 @@ function actualizarMoodboard(codigo) {
   document.getElementById("moodboard-type").textContent = data.tipo;
   document.getElementById("desc-output").textContent = `${data.stile} • ${data.mood} • ${data.palette}`;
 
-  // Usa il primo colore della palette come sfondo della card
-  resultCard.style.backgroundColor = data.hex[0];
-  resultCard.style.color = getContrastYIQ(data.hex[0]);
+  resultCard.style.backgroundColor = data.hex;
+  resultCard.style.color = getContrastYIQ(data.hex);
 
   const grid = document.getElementById("palette-grid");
   grid.innerHTML = "";
@@ -178,30 +171,27 @@ function actualizarMoodboard(codigo) {
     swatch.title = "Clicca per copiare HEX";
 
     swatch.onclick = () => {
-      navigator.clipboard.writeText(color);
-      const hint = document.getElementById("copy-hint");
-      if (hint) {
-        hint.textContent = `Colore ${color} copiato negli appunti!`;
-        setTimeout(() => {
-          hint.textContent = "Clicca su un colore per copiare il codice HEX";
-        }, 2000);
-      }
-    };
-
-    grid.appendChild(swatch);
-  });
+navigator.clipboard.writeText(color);
+const hint = document.getElementById("copy-hint");
+if (hint) {
+hint.textContent = Colore ${color} copiato negli appunti!;
+setTimeout(() => {
+hint.textContent = "Clicca su un colore per copiare il codice HEX";
+}, 2000);
 }
-
-// Funzione per ricominciare il quiz completata
+};
+grid.appendChild(swatch);
+});
+}
 function restartQuiz() {
-  currentQuestionIndex = 0;
-  userChoices = [];
-  resultCard.style.display = "none";
-  quizContainer.style.display = "block";
-  showQuestion();
-}
-
-// Avvia il quiz al caricamento
+currentQuestionIndex = 0;
+userChoices = [];
+resultCard.style.display = "none";
+quizContainer.style.display = "block";
 showQuestion();
+}
+// Inicia el quiz al cargar
+showQuestion();
+
 
  
