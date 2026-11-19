@@ -1,21 +1,127 @@
-/* Contenitore Quiz e Risultati */
+/* Reset e Stili Base */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  background-color: #FAF8F5;
+  color: #262522;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Header e Navigazione */
+.site-header {
+  background-color: #ffffff;
+  border-bottom: 1px solid #EAE4D7;
+  padding: 18px 24px;
+}
+
+.header-inner {
+  max-width: 1140px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.brand {
+  display: flex;
+  flex-direction: column;
+}
+
+.brand-logo {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.75rem;
+  font-weight: 500;
+  color: #262522;
+  text-decoration: none;
+  line-height: 1.1;
+}
+
+.brand-tagline {
+  font-size: 0.75rem;
+  color: #7A756D;
+  letter-spacing: 0.03em;
+}
+
+.main-nav {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.main-nav a {
+  text-decoration: none;
+  color: #5C5952;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.main-nav a:hover,
+.main-nav a.active {
+  color: #C87D4B;
+}
+
+/* Animazione ingresso */
+.fade-in {
+  animation: fadeIn 0.4s ease forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Contenitore Quiz */
 #quiz-container {
   width: calc(100% - 32px);
-  max-width: 860px; /* Ampliado para que quepan 2 tarjetas anchas */
-  margin-bottom: 40px;
-  background-color: transparent; /* Fondo limpio como la referencia */
+  max-width: 860px;
+  margin: 40px auto;
+  background-color: transparent;
   padding: 16px 0;
 }
 
-#result-card {
-  width: calc(100% - 32px);
-  max-width: 540px;
-  margin-bottom: 40px;
-  background-color: #ffffff;
-  border-radius: 16px;
-  padding: 36px;
-  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.08);
-  transition: background-color 0.4s ease, color 0.4s ease;
+/* Barra di Avanzamento */
+.progress-wrapper {
+  max-width: 480px;
+  margin: 0 auto 32px auto;
+}
+
+.progress-info {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 8px;
+}
+
+#step-text {
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #7A756D;
+}
+
+.progress-bar-bg {
+  width: 100%;
+  height: 6px;
+  background-color: #EAE4D7;
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+#progress-fill {
+  height: 100%;
+  width: 33.33%;
+  background-color: #C87D4B;
+  border-radius: 999px;
+  transition: width 0.35s ease;
 }
 
 /* Domande e Opzioni */
@@ -52,7 +158,7 @@
 }
 
 .option-btn:hover {
-  border-color: #C87D4B; /* Tono terracota de tu barra de navegación */
+  border-color: #C87D4B;
   transform: translateY(-2px);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
 }
@@ -61,7 +167,7 @@
   width: 100%;
   height: 200px;
   overflow: hidden;
-  background-color: #EAE4D7; /* Color de respaldo mientras carga la foto */
+  background-color: #EAE4D7;
 }
 
 .option-img-wrapper img {
@@ -115,12 +221,107 @@
 
 .option-btn:hover .option-radio {
   border-color: #C87D4B;
+  background-color: rgba(200, 125, 75, 0.15);
+}
+
+/* Card Risultato e Moodboard */
+#result-card {
+  width: calc(100% - 32px);
+  max-width: 540px;
+  margin: 40px auto;
+  background-color: #ffffff;
+  border-radius: 16px;
+  padding: 36px;
+  text-align: center;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.08);
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+#code-output {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  padding: 4px 12px;
+  border-radius: 999px;
+  background-color: rgba(0, 0, 0, 0.08);
+  margin-bottom: 12px;
+}
+
+#moodboard-type {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.85rem;
+  font-weight: 400;
+  margin-bottom: 6px;
+}
+
+#desc-output {
+  font-size: 0.95rem;
+  opacity: 0.85;
+  margin-bottom: 24px;
+}
+
+/* Griglia Palette Colori */
+#palette-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.color-swatch {
+  height: 64px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  cursor: pointer;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease;
+}
+
+.color-swatch:hover {
+  transform: scale(1.03);
+}
+
+#copy-hint {
+  display: block;
+  font-size: 0.78rem;
+  opacity: 0.75;
+  margin-bottom: 24px;
+}
+
+/* Pulsante Ricomincia */
+#result-card button {
+  width: 100%;
+  padding: 14px 24px;
+  font-family: inherit;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #ffffff;
+  background-color: #262522;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+#result-card button:hover {
+  background-color: #C87D4B;
 }
 
 /* Responsive */
 @media (max-width: 640px) {
+  .header-inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
   #options {
-    grid-template-columns: 1fr; /* 1 columna en teléfonos */
+    grid-template-columns: 1fr;
   }
 
   .option-img-wrapper {
@@ -130,6 +331,10 @@
   #question {
     font-size: 1.6rem;
   }
+
+  #result-card {
+    padding: 24px;
+  }
 }
 
 @media (min-width: 480px) {
@@ -137,3 +342,4 @@
     grid-template-columns: repeat(4, 1fr);
   }
 }
+
