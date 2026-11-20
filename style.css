@@ -940,3 +940,234 @@ h1, h2, h3, h4,
     font-size: 36px;
   }
 }
+/* =========================================
+9. ESPLORA GLI STILI (esplora-stili.html)
+   ========================================= */
+.stili-hero {
+  max-width: 560px;
+  padding-top: 24px;
+  margin-bottom: 72px;
+}
+
+.stili-hero h1 {
+  font-size: 3rem;
+  line-height: 1.15;
+  margin-bottom: 20px;
+  color: var(--text-dark);
+}
+
+.stili-hero-subtitle {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+/* Blocchetti 4 stili alternati */
+.style-showcase {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 64px;
+  align-items: center;
+  margin-bottom: 96px;
+}
+
+.style-showcase.reverse {
+  grid-template-columns: 1fr 1.2fr;
+}
+
+.style-showcase-img img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  display: block;
+  border-radius: 2px;
+}
+
+.style-showcase-content h2 {
+  font-size: 2.1rem;
+  margin-bottom: 10px;
+  color: var(--text-dark);
+}
+
+.style-lead {
+  font-family: var(--font-serif);
+  font-size: 1.15rem;
+  color: var(--text-muted);
+  margin-bottom: 18px;
+}
+
+.style-desc {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  line-height: 1.65;
+  margin-bottom: 18px;
+}
+
+.style-materials {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent-terracotta);
+  margin-bottom: 22px;
+}
+
+.style-palette-label {
+  display: block;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent-terracotta);
+  margin-bottom: 10px;
+}
+
+.style-mini-palette {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.mini-swatch {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.mini-color {
+  display: block;
+  width: 100%;
+  height: 28px;
+  border: 1px solid rgba(44, 46, 48, 0.1);
+}
+
+.mini-label {
+  font-size: 0.78rem;
+  color: var(--text-dark);
+}
+
+.style-color-note {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  line-height: 1.55;
+}
+
+/* Sezione Regola 60 / 30 / 10 */
+.color-rule-section {
+  padding-top: 24px;
+  margin-bottom: 88px;
+}
+
+.color-rule-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 24px;
+  margin-bottom: 28px;
+}
+
+.color-rule-header h2 {
+  font-size: 2rem;
+  color: var(--text-dark);
+}
+
+.color-rule-header .eyebrow {
+  margin-bottom: 0;
+  font-size: 0.72rem;
+}
+
+.color-rule-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+
+.rule-bar {
+  width: 100%;
+  height: 3px;
+  margin-bottom: 18px;
+}
+
+.rule-bar-60 { background-color: #DDD7CD; }
+.rule-bar-30 { background-color: #ABA296; }
+.rule-bar-10 { background-color: var(--accent-terracotta); }
+
+.color-rule-card h3 {
+  font-size: 1.25rem;
+  color: var(--text-dark);
+  margin-bottom: 10px;
+}
+
+.color-rule-card .rule-pct {
+  color: var(--text-muted);
+  margin-right: 6px;
+}
+
+.color-rule-card p {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  line-height: 1.55;
+}
+
+/* Box CTA Finale */
+.stili-cta-box {
+  background-color: #FAF8F2;
+  border: 1px solid var(--border-light);
+  box-shadow: 0 10px 30px rgba(44, 46, 48, 0.04);
+  padding: 56px 32px;
+  text-align: center;
+  border-radius: var(--radius-sm);
+  margin-bottom: 40px;
+}
+
+.stili-cta-box h2 {
+  font-size: 2.2rem;
+  color: var(--text-dark);
+  margin-bottom: 12px;
+}
+
+.stili-cta-subtitle {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  margin-bottom: 28px;
+}
+
+.stili-cta-note {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin-top: 18px;
+}
+
+/* Responsive Esplora gli Stili */
+@media (max-width: 768px) {
+  .stili-hero h1 {
+    font-size: 2.3rem;
+  }
+
+  .style-showcase,
+  .style-showcase.reverse {
+    grid-template-columns: 1fr;
+    gap: 28px;
+    margin-bottom: 64px;
+  }
+
+  /* Su mobile mostra sempre la foto prima del testo anche nei blocchi invertiti */
+  .style-showcase.reverse .style-showcase-img {
+    order: -1;
+  }
+
+  .color-rule-header {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .color-rule-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .stili-cta-box {
+    padding: 40px 20px;
+  }
+}
