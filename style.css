@@ -1171,3 +1171,149 @@ h1, h2, h3, h4,
     padding: 40px 20px;
   }
 }
+/* =========================================
+10. DESIGN JOURNAL (design-journal.html)
+   ========================================= */
+.dj-hero{
+ text-align: center;
+   max-width:680px;
+   margin:24px auto 64px auto;
+
+.dj-hero h1{
+   font-size: 3rem;
+   color: var(--text-dark);
+   margin-bottom:16px;
+}
+
+.dj-subtitle{
+   font-size:0.95rem;
+   color: var(--text-muted);
+   line-height:1.6;
+}
+
+.dj-featured{
+   display:grid;
+   grid-template-columns: 1.15fr 1fr;
+   gap: 56px;
+   align-items: center;
+   margin-bottom: 88px;
+}
+
+.dj-featured-img img {
+   width: 100%;
+   aspect-ratio: 4 / 3;
+   object-fit: cover;
+   display: block;
+   border-radius: 2px;
+}
+
+   .dj-featured-content h2 {
+  font-size: 2.15rem;
+  line-height: 1.25;
+  color: var(--text-dark);
+  margin-bottom: 24px;
+}
+
+.dj-featured-desc {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  margin-bottom: 28px;
+  line-height: 1.6;
+}
+
+.dj-read-time-accent {
+  display: block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent-terracotta);
+  margin-bottom: 12px;
+}
+   
+.dj-guides-section {
+  margin-bottom: 48px;
+}
+
+.dj-section-title {
+  font-size: 2rem;
+  color: var(--text-dark);
+  margin-bottom: 36px;
+}
+
+.dj-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 32px;
+  row-gap: 56px;
+}
+
+.dj-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.dj-card img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  display: block;
+  margin-bottom: 16px;
+  border-radius: 2px;
+}
+
+.dj-category {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent-terracotta);
+  margin-bottom: 8px;
+}
+
+.dj-card h3 {
+  font-size: 1.35rem;
+  line-height: 1.3;
+  color: var(--text-dark);
+  margin-bottom: 16px;
+}
+
+.dj-time {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin-top: auto;
+  margin-bottom: 8px;
+}
+
+.dj-link {
+  display: inline-block;
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: var(--text-dark);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.dj-link:hover {
+  color: var(--accent-terracotta);
+}
+
+
+@media (max-width: 768px) {
+  .dj-hero h1 {
+    font-size: 2.3rem;
+  }
+
+  .dj-featured {
+    grid-template-columns: 1fr;
+    gap: 28px;
+    margin-bottom: 64px;
+  }
+
+  .dj-grid {
+    grid-template-columns: 1fr;
+    row-gap: 44px;
+  }
+}   
+   
+
